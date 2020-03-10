@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
         </p>
         <a
           className="App-link"
