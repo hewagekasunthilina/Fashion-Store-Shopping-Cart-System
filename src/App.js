@@ -1,18 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
-import Button from '@material-ui/core/Button';
-import AdminPanel from "./Components/Admin/AdminPanel";
-import PrimarySearchAppBar from "./Components/Common/Header/Header";
-import RecipeReviewCard from "./Components/Common/Footer/Footer";
-
+import Header from "./Components/Common/Header/Header";
+import Carousel from "./Components/Common/Carousel/Carousel";
 
 class App extends Component{
   render() {
     return(
         <div>
-           <PrimarySearchAppBar/>
-           <RecipeReviewCard/>
-
+            <Header/>
+            <Carousel/>
         </div>
     )
   }
