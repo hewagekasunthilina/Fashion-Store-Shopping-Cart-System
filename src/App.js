@@ -1,26 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
+import AdminPanel from "./Components/Admin/AdminPanel";
+import PrimarySearchAppBar from "./Components/Common/Header/Header";
+import RecipeReviewCard from "./Components/Common/Footer/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <Button variant="secondary">Secondary</Button>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
 
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  render() {
+    return(
+        <div>
+           <PrimarySearchAppBar/>
+           <RecipeReviewCard/>
+
+        </div>
+    )
+  }
+
 }
 
 export default App;
