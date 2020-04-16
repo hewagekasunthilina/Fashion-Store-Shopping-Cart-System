@@ -1,8 +1,6 @@
 import React, {Fragment} from "react";
 import Navbar from "../Common/NavBar/NavBar";
 
-
-
 const Template = (props) => {
 
     const menuList = [
