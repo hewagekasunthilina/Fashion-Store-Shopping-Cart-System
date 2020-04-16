@@ -21,6 +21,11 @@ const Template = (props) => {
             route: 'projects',
             name: 'Store'
         },
+        {
+            url: '/AddToCart',
+            route: 'cart',
+            name: 'User'
+        }
     ];
 
     return (
