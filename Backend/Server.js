@@ -4,10 +4,7 @@ const bodyParser = require('body-parser');
 const PORT = 3000;
 const cors = require('cors');
 const mongoose = require('mongoose');
-
-app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+const categoryRoutes = require('./Category.route');
 
 mongoose
     .connect(
@@ -21,3 +18,9 @@ mongoose
     .catch(error => {
         console.log(error);
     });
+
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+app.use('/category', categoryRoutes);
