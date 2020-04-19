@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = 3900;
+const PORT = 3000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
@@ -14,7 +14,9 @@ mongoose
         "mongodb+srv://FashionCluster:fashionstore500@fashioncluster-a2dyx.gcp.mongodb.net/test?retryWrites=true&w=majority"
     )
     .then(() => {
-        app.listen(3900);
+        app.listen(PORT);
+        console.log("Server Running" + PORT);
+        console.log("Database Connected")
     })
     .catch(error => {
         console.log(error);
