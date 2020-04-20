@@ -4,7 +4,7 @@ class AddStoreManager extends Component{
     render() {
         return(
             <div>
-                <form className="needs-validation" noValidate>
+                <form className="needs-validation" noValidate style={{width:'50rem', marginLeft:'15rem', marginTop:'8rem'}}>
                     <div className="form-row">
                         <div className="col-md-4 mb-3">
                             <label htmlFor="validationTooltip01">First name</label>
