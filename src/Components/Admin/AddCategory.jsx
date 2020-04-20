@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Admin extends Component{
+class AddCategory extends Component{
     // constructor(props) {
     //     super(props);
     //     this.onChangeCategoryName = this.onChangeCategoryName.bind(this);
@@ -40,8 +40,26 @@ class Admin extends Component{
     // }
     render() {
         return(
-            <a className="btn btn-primary" href="./AddCategory" role="button">New Category</a>
+
+            <div style={{ marginLeft:'10%', marginTop:'8rem'}}>
+                <h3 style={{marginLeft: '24rem'}}>Add New Category</h3>
+                <form  style={{width:'50%', marginLeft:'16rem'}}>
+                    <div className="form-group">
+                        <label>New Category Name:  </label>
+                        <input type="text" className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label>New Category Number: </label>
+                        <input type="text" className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="submit" value="Add Category" className="btn btn-primary" style={{marginLeft:'10rem', width:'15rem'}}/>
+                        <a className="btn btn-primary btn-sm" href="/BackAdmin" role="button" style={{marginLeft:'8rem'}}>Back</a>
+                    </div>
+                </form>
+            </div>
+
         )
     }
 }
-export default Admin;
+export default AddCategory;
