@@ -57,7 +57,7 @@ class Admin extends Component{
                         <div className="card-header" style={{textAlign:'center'}}>New Store Manager</div>
                         <div className="card-body">
                             <h5 className="card-title" style={{textAlign:'center'}}>Add New Store Manager</h5>
-                            <a href="#" className="btn btn-success" style={{marginLeft:'3rem'}}>Go somewhere</a>
+                            <a href="/AddStoreManager" className="btn btn-success" style={{marginLeft:'3rem'}}>Go somewhere</a>
                         </div>
                     </div>
                 </div>
