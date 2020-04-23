@@ -5,3 +5,6 @@ const category = [
         category_number: 1,
     }
 ];
+module.exports = {
+    category
+}

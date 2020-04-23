@@ -20,20 +20,18 @@ class AddCategory extends Component{
     handleCategoryNameChange(e) {
 
         this.setState({
-                id: e.target.value
+                category_name: e.target.value
             },
             () => {
-                console.log("Category Name ", this.state.category_name);
             });
     }
 
     handleCategoryNumberChange(e) {
 
         this.setState({
-                id: e.target.value
+                category_number: e.target.value
             },
             () => {
-                console.log("Category Number ", this.state.category_number);
             });
     }
 
@@ -42,7 +40,7 @@ class AddCategory extends Component{
         e.preventDefault();
 
         const categoryObject = {
-           category_name: this.state.category_name,
+            category_name: this.state.category_name,
             category_number: this.state.category_number
         };
 
@@ -84,7 +82,7 @@ class AddCategory extends Component{
                         <input type="text"
                                className="form-control"
                                id="category_number"
-                               onChange={this.handleCategoryNumberChange()}/>
+                               onChange={this.handleCategoryNumberChange}/>
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Add Category" className="btn btn-primary" style={{marginLeft:'10rem', width:'15rem'}}/>
