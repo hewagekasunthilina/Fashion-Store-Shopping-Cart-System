@@ -6,6 +6,7 @@ class Home extends Component{
     render() {
         return (
             <Template>
+                <h3>home</h3>
                 <Carousel/>
             </Template>
         );
