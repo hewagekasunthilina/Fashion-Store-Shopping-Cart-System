@@ -1,10 +1,6 @@
 import React, {Component} from "react";
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-// const BASE_URL = 'http://localhost:3000';
 
 class AddCategory extends Component{
-
 
     constructor(props) {
         super(props);
@@ -21,7 +17,6 @@ class AddCategory extends Component{
     }
 
     handleCategoryNameChange(e) {
-
         this.setState({
                 category_name: e.target.value
             },
@@ -30,22 +25,20 @@ class AddCategory extends Component{
     }
 
     handleCategoryNumberChange(e) {
-
         this.setState({
                 category_number: e.target.value
             },
             () => {
             });
     }
-    handleCategoryIdChange(e) {
 
+    handleCategoryIdChange(e) {
         this.setState({
                 id: e.target.value
             },
             () => {
             });
     }
-
 
     handleSubmit = async (e) => {
 
@@ -66,28 +59,23 @@ class AddCategory extends Component{
 
         const responseData = await response.json();
         console.log(responseData);
-
-
-
-
         console.log(categoryObject);
 
     };
     render() {
         return(
-
             <div style={{ marginLeft:'10%', marginTop:'8rem'}}>
                 <h3 style={{marginLeft: '24rem'}}>Add New Category</h3>
                 <form onSubmit={this.handleSubmit} action="/Backend/Routes/Fashion.routes.js" method="POST"  style={{width:'50%', marginLeft:'16rem'}}>
                     <div className="form-group">
-                        <label>New Category Name:  </label>
+                        <label>New Category ID:</label>
                         <input type="text"
                                className="form-control"
                                id="id"
                                onChange={this.handleCategoryIdChange}/>
                     </div>
                     <div className="form-group">
-                        <label>New Category Name:  </label>
+                        <label>New Category Name:</label>
                         <input type="text"
                                className="form-control"
                                id="category_name"
