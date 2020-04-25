@@ -5,6 +5,8 @@ class Admin extends Component{
     render() {
         return(
             <div className="row" style={{marginLeft:'-0.5rem', marginTop:'5rem'}}>
+                <div className="alert alert-primary" role="alert" style={{width:'100%'}}>
+                </div>
                 <div className="col-md-3">
                     <div className="card text-white bg-primary mb-3" style={{maxWidth:'18rem'}}>
                         <div className="card-header" style={{textAlign:'center'}}>New Category</div>
@@ -44,7 +46,11 @@ class Admin extends Component{
                         </div>
                     </div>
                 </div>
+                <div className="alert alert-primary" role="alert" style={{width:'100%'}}>
+                </div>
             </div>
+
+
         )
     }
 }

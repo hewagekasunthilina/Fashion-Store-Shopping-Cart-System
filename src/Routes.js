@@ -12,6 +12,7 @@ class Routes extends Component{
     render() {
         return (
             <Fragment>
+                {/************************** Admin Part ***************************/}
                 <Route path={"/"} exact component={Home}/>
                 <Route path={"/Admin"} exact component={Admin}/>
                 <Route path={"/StorePanel"} exact component={StorePanel}/>
@@ -19,6 +20,7 @@ class Routes extends Component{
                 <Route path={"/AddCategory"} exact component={AddCategory}/>
                 <Route path={"/BackAdmin"} exact component={Admin}/>
                 <Route path={"/AddStoreManager"} exact component={AddStoreManager}/>
+                {/**********************************************************************/}
             </Fragment>
         );
     }

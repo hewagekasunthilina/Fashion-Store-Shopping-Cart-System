@@ -14,14 +14,13 @@ app.use(cors());
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
-app.get('/Backend/category', (req, res) => { //lists all  available products
+app.get('/Backend/category', (req, res) => {
     console.log("request received for get categories");
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
         var dbo = db.db("FashionDB");
         dbo.collection("category").find({}).toArray(function (err, result) {
             if (err) throw err;
-            // console.log(result);
             let rrr = [];
             rrr.push(result);
             res.send(result);
