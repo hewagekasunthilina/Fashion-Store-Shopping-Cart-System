@@ -1,8 +1,6 @@
 import React, {Fragment} from "react";
 import Navbar from "../Common/NavBar/NavBar";
 
-
-
 const Template = (props) => {
 
     const menuList = [
@@ -22,9 +20,15 @@ const Template = (props) => {
             name: 'Store'
         },
         {
+            url: '/AddToCart',
+            route: 'cart',
+            name: 'User'
+        },
+       {
             url: '/LoginButton',
             route: 'LoginButton',
             name: 'My_Test'
+
         }
     ];
 
