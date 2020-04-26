@@ -23,6 +23,12 @@ const Template = (props) => {
             url: '/AddToCart',
             route: 'cart',
             name: 'User'
+        },
+       {
+            url: '/LoginButton',
+            route: 'LoginButton',
+            name: 'My_Test'
+
         }
     ];
 
@@ -31,6 +37,7 @@ const Template = (props) => {
             <Navbar menuList={menuList} />
             {props.children}
         </Fragment>
+
     );
 };
 
