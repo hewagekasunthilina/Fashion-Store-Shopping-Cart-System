@@ -8,10 +8,12 @@ class AddCategory extends Component{
         this.state = {
             category_id: '',
             category_name: '',
+            category_description: ''
         };
 
         this.handleCategoryIdChange = this.handleCategoryIdChange.bind(this);
         this.handleCategoryNameChange = this.handleCategoryNameChange.bind(this);
+        this.handleCategoryDescriptionChange = this.handleCategoryDescriptionChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -31,13 +33,27 @@ class AddCategory extends Component{
             });
     }
 
-    handleSubmit = async (e) => {
+    handleCategoryDescriptionChange(e) {
+        this.setState({
+                category_description: e.target.value
+            },
+            () => {
+            });
+    }
 
+    handleSubmit = async (e) => {
         e.preventDefault();
         const categoryObject = {
             category_id: this.state.category_id,
             category_name: this.state.category_name,
+            category_description: this.state.category_description
         };
+
+        this.setState({
+            category_id: '',
+            category_name: '',
+            category_description: ''
+        });
 
         const response = await fetch("http://localhost:4000/api/category", {
             method: "POST",
@@ -50,7 +66,6 @@ class AddCategory extends Component{
         const responseData = await response.json();
         console.log(responseData);
         console.log(categoryObject);
-
     };
     render() {
         return(
@@ -61,15 +76,25 @@ class AddCategory extends Component{
                         <label>New Category ID:</label>
                         <input type="text"
                                className="form-control"
-                               id="id"
-                               onChange={this.handleCategoryIdChange}/>
+                               id="category_id"
+                               onChange={this.handleCategoryIdChange}
+                               value={this.state.category_id}/>
                     </div>
                     <div className="form-group">
                         <label>New Category Name:</label>
                         <input type="text"
                                className="form-control"
                                id="category_name"
-                               onChange={this.handleCategoryNameChange}/>
+                               onChange={this.handleCategoryNameChange}
+                               value={this.state.category_name}/>
+                    </div>
+                    <div className="form-group">
+                        <label>New Category Description:</label>
+                        <input type="text"
+                               className="form-control"
+                               id="category_description"
+                               onChange={this.handleCategoryDescriptionChange}
+                               value={this.state.category_description}/>
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Add Category" className="btn btn-primary" style={{width:'15rem'}}/>

@@ -12,13 +12,13 @@ router.post("/category", (req, res, next) => {
 
 router.get("/category", (req, res, next) => {
     Category.find({}, (err, category) => {
-        var sensorMap = {};
+        var categoryMap = {};
 
         category.forEach((category) => {
-            sensorMap[category.id] = category;
+            categoryMap[category.id] = category;
         });
 
-        res.send(sensorMap);
+        res.send(categoryMap);
     }).catch(next);
 });
 
