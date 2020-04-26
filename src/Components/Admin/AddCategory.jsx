@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./AddCategory.css"
 
-class AddCategory extends Component{
+class AddCategory extends Component {
 
     constructor(props) {
         super(props);
@@ -67,10 +67,11 @@ class AddCategory extends Component{
         console.log(responseData);
         console.log(categoryObject);
     };
+
     render() {
-        return(
+        return (
             <div className="container">
-                <h3 style={{marginLeft: '24rem', marginBottom:'1rem', paddingTop:'1rem'}}>Add New Category</h3>
+                <h3 style={{marginLeft: '24rem', marginBottom: '1rem', paddingTop: '1rem'}}>Add New Category</h3>
                 <form onSubmit={this.handleSubmit} action="/Backend/Routes/Fashion.routes.js" method="POST">
                     <div className="form-group">
                         <label>New Category ID:</label>
@@ -97,8 +98,9 @@ class AddCategory extends Component{
                                value={this.state.category_description}/>
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Add Category" className="btn btn-primary" style={{width:'15rem'}}/>
-                        <a className="btn btn-primary btn-sm" href="/BackAdmin" role="button" style={{marginLeft:'28.4rem', marginBottom:'2rem', marginTop:'-2rem'}}>Back</a>
+                        <input type="submit" value="Add Category" className="btn btn-primary" style={{width: '15rem'}}/>
+                        <a className="btn btn-primary btn-sm" href="/BackAdmin" role="button"
+                           style={{marginLeft: '28.4rem', marginBottom: '2rem', marginTop: '-2rem'}}>Back</a>
                     </div>
                 </form>
             </div>
@@ -106,4 +108,5 @@ class AddCategory extends Component{
         )
     }
 }
+
 export default AddCategory;

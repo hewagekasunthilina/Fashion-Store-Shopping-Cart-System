@@ -25,7 +25,7 @@ router.get("/category", (req, res, next) => {
 module.exports = router;
 
 router.get("/category/:id", (req, res, next) => {
-    Category.find({ id: req.params.id }, (err, category) => {
+    Category.find({id: req.params.id}, (err, category) => {
         var categoryMap = {};
 
         category.forEach((category) => {
@@ -37,7 +37,7 @@ router.get("/category/:id", (req, res, next) => {
 });
 
 router.delete("/category/:id", (req, res, next) => {
-    Category.deleteOne({ id: req.params.id }, (err, result) => {
+    Category.deleteOne({id: req.params.id}, (err, result) => {
         if (result.deletedCount) {
             res.json({
                 message: `deleted ${req.params.id}`,
