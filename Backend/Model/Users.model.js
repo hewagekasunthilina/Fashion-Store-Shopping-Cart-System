@@ -7,6 +7,6 @@ const usersSchema = new Schema({
     sign_in_Email1 : {type: String, required: true, unique: true},
     sign_upPassword : {type: String, required: true},
     sign_upPassword_confirm : {type: String, required: true}
-}); // modal class ekak wage ekak me hadala thiyenne
+});
 
 module.exports = mongoose.model("Users", usersSchema);
