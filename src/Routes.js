@@ -8,6 +8,7 @@ import Home from "./Components/Home/Home";
 import AddToCart from "./Components/User/AddToCart";
 import AddCategory from "./Components/Admin/AddCategory";
 import AddStoreManager from "./Components/Admin/AddStoreManager";
+import Payment from "./Components/User/Payment";
 
 import LoginButton from "./Components/Login/LoginButton";
 import UserProfile from "./Components/Profile/UserProfile";
@@ -25,7 +26,11 @@ class Routes extends Component{
                 <Route path={"/AddCategory"} exact component={AddCategory}/>
                 <Route path={"/BackAdmin"} exact component={Admin}/>
                 <Route path={"/AddStoreManager"} exact component={AddStoreManager}/>
+
+                <Route path={"/Payment"} exact component={Payment}/>
+
                 <Route path={"/UserProfile"} exact component={UserProfile}/>
+
                 {/**********************************************************************/}
             </Fragment>
         );
