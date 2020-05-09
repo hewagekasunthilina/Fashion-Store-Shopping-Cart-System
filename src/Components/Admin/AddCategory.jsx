@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import "./AddCategory.css";
 
-
 class AddCategory extends Component {
 
     constructor(props) {
@@ -9,10 +8,10 @@ class AddCategory extends Component {
         this.state = {
             category_id: '',
             category_name: '',
-            category_description: '' //mulimma thiyenna one status eka null nisa mehema da gannawa form eke
+            category_description: ''
         };
 
-        this.handleCategoryIdChange = this.handleCategoryIdChange.bind(this); //one namakin method ekak danna ewa pahala implement karanna
+        this.handleCategoryIdChange = this.handleCategoryIdChange.bind(this);
         this.handleCategoryNameChange = this.handleCategoryNameChange.bind(this);
         this.handleCategoryDescriptionChange = this.handleCategoryDescriptionChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -56,13 +55,13 @@ class AddCategory extends Component {
             category_description: ''
         });
 
-        const response = await fetch("http://localhost:4000/api/category", { //metahana url eka wenas wenna oone server js ekenui fashion modal ekenui aran
+        const response = await fetch("http://localhost:4000/api/category", {
 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(categoryObject) //uda gatta object eka
+            body: JSON.stringify(categoryObject)
         });
 
         const responseData = await response.json();
