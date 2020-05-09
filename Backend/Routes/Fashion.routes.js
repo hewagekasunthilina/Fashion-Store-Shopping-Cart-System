@@ -49,3 +49,11 @@ router.delete("/category/:id", (req, res, next) => {
         }
     }).catch(next);
 });
+
+router.post("/signup", (req, res, next) => {
+    Users.create(req.body)
+        .then((users) => {
+            res.send(users);
+        })
+        .catch(next);
+});
