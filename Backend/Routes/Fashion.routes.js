@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Category = require("../Model/Fashion.model")
-const Users = require("../Model/Users.model")
+const Category = require("../Model/Fashion.model");
+const Users = require("../Model/Users.model");
 
 router.post("/category", (req, res, next) => {
     Category.create(req.body)
