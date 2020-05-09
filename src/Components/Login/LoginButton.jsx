@@ -25,7 +25,7 @@ class LoginButton extends Component {
 
        handleSign_up_Name(e){
             this.setState({
-                sign_up_name: e.target.value
+                    sign_up_Name: e.target.value
                 },
                 () => {
                 });
@@ -62,7 +62,7 @@ class LoginButton extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const categoryObject = {
+        const userDetailsObj = {
             sign_up_Name : this.state.sign_up_Name ,
             sign_up_NIC : this.state.sign_up_NIC,
             sign_in_Email1 :this.state.sign_in_Email1,
@@ -83,12 +83,12 @@ class LoginButton extends Component {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(categoryObject)
+            body: JSON.stringify(userDetailsObj)
         });
 
         const responseData = await response.json();
         console.log(responseData);
-        console.log(categoryObject);
+        console.log(userDetailsObj);
     };
 
 
@@ -182,9 +182,9 @@ class LoginButton extends Component {
                                                 <div className="form-group mrgine_make">
                                                     <label className="d-flex justify-content-start"
                                                            htmlFor="exampleInputPassword1">User Name</label>
-                                                    <input type="text"
-                                                           className="form-control border-test"
+                                                    <input type="text" className="form-control border-test"
                                                            id="sign_up_Name"
+
                                                            onChange={this.handleSign_up_Name}
                                                            value={this.state.sign_up_Name}/>
                                                 </div>
@@ -196,28 +196,7 @@ class LoginButton extends Component {
                                                            onChange={this.handleSign_up_NIC}
                                                            value={this.state.sign_up_NIC}/>
                                                 </div>
-                                                <div className="form-group mrgine_make">
-                                                    <label className="d-flex justify-content-start"
-                                                           htmlFor="exampleInputEmail1">Country
-                                                    </label>
-                                                    <div className="input-group mb-3">
-                                                        <input type="text" className="form-control border-test"
-                                                               aria-label="Text input with dropdown button"/>
-                                                        <div className="input-group-prepend">
-                                                            <button className="btn dropdown-toggle" data-toggle="dropdown"
-                                                                    aria-haspopup="true" aria-expanded="false">
-                                                            </button>
-                                                            <div className="dropdown-menu">
-                                                                <a className="dropdown-item" href="#">Sri Lanka</a>
-                                                                <a className="dropdown-item" href="#">India</a>
-                                                                <a className="dropdown-item" href="#">Other</a>
-                                                                <div role="separator" className="dropDwn"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </td>
+                                               </td>
                                             <td>
 
                                                 <div className="form-group mrgine_make">
