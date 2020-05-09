@@ -10,6 +10,7 @@ import AddCategory from "./Components/Admin/AddCategory";
 import AddStoreManager from "./Components/Admin/AddStoreManager";
 
 import LoginButton from "./Components/Login/LoginButton";
+import UserProfile from "./Components/Profile/UserProfile";
 
 class Routes extends Component{
     render() {
@@ -24,6 +25,7 @@ class Routes extends Component{
                 <Route path={"/AddCategory"} exact component={AddCategory}/>
                 <Route path={"/BackAdmin"} exact component={Admin}/>
                 <Route path={"/AddStoreManager"} exact component={AddStoreManager}/>
+                <Route path={"/UserProfile"} exact component={UserProfile}/>
                 {/**********************************************************************/}
             </Fragment>
         );

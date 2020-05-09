@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import "./AddCategory.css"
+import "./AddCategory.css";
+
 
 class AddCategory extends Component {
 
@@ -8,10 +9,10 @@ class AddCategory extends Component {
         this.state = {
             category_id: '',
             category_name: '',
-            category_description: ''
+            category_description: '' //mulimma thiyenna one status eka null nisa mehema da gannawa form eke
         };
 
-        this.handleCategoryIdChange = this.handleCategoryIdChange.bind(this);
+        this.handleCategoryIdChange = this.handleCategoryIdChange.bind(this); //one namakin method ekak danna ewa pahala implement karanna
         this.handleCategoryNameChange = this.handleCategoryNameChange.bind(this);
         this.handleCategoryDescriptionChange = this.handleCategoryDescriptionChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -55,12 +56,13 @@ class AddCategory extends Component {
             category_description: ''
         });
 
-        const response = await fetch("http://localhost:4000/api/category", {
+        const response = await fetch("http://localhost:4000/api/category", { //metahana url eka wenas wenna oone server js ekenui fashion modal ekenui aran
+
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(categoryObject)
+            body: JSON.stringify(categoryObject) //uda gatta object eka
         });
 
         const responseData = await response.json();
@@ -70,9 +72,9 @@ class AddCategory extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container" id= "backPanel">
                 <h3 style={{marginLeft: '24rem', marginBottom: '1rem', paddingTop: '1rem'}}>Add New Category</h3>
-                <form onSubmit={this.handleSubmit} action="/Backend/Routes/Fashion.routes.js" method="POST">
+                <form id="categoryForm"  onSubmit={this.handleSubmit} action="/Backend/Routes/Fashion.routes.js" method="POST">
                     <div className="form-group">
                         <label>New Category ID:</label>
                         <input type="text"
