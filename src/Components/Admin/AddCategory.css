@@ -1,4 +1,4 @@
-.container{
+#backPanel{
     margin-Left: 10%;
     margin-right: 10%;
     margin-top: 8rem;
@@ -9,8 +9,7 @@
     box-shadow: 10px 11px 21px 5px rgba(0,0,0,0.46);;
 }
 
-form{
+#categoryForm{
     width: 50%;
     margin-left: 16rem;
 }
-
