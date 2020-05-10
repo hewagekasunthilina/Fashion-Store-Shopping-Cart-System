@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Template from "../Template/Template";
+import CategoryList from "./CategoryList";
 
 class Admin extends Component {
     render() {
@@ -51,6 +52,9 @@ class Admin extends Component {
                     <div className="alert alert-primary" role="alert" style={{width: '100%'}}>
                     </div>
                 </div>
+
+                <CategoryList>
+                </CategoryList>
             </Template>
         )
     }
