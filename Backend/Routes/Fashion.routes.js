@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Category = require("../Model/Fashion.model");
+const Payment = require("../Model/Payment.model");
 
 router.post("/category", (req, res, next) => {
     Category.create(req.body)
@@ -49,3 +50,24 @@ router.delete("/category/:id", (req, res, next) => {
         }
     }).catch(next);
 });
+
+router.post("/payment", (req, res, next) => {
+    Payment.create(req.body)
+        .then((payment) => {
+            res.send(payment);
+        })
+        .catch(next);
+});
+
+router.get("/payment", (req, res, next) => {
+    Category.find({}, (err, payment) => {
+        var sensorMapper = {};
+
+        payment.forEach((payment) => {
+            sensorMapper[payment.id] = payment;
+        });
+
+        res.send(sensorMapper);
+    }).catch(next);
+});
+
