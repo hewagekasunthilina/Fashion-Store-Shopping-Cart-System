@@ -3,6 +3,102 @@ import Template from "../Template/Template";
 import "./AddStoreManager.css"
 
 class AddStoreManager extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sign_up_Name: '',
+            sign_up_NIC: '',
+            sign_in_Email1: '',
+            sign_upPassword: '',
+            sign_upPassword_confirm: '',
+            sign_up_contact_number: ''
+        };
+
+        this.handleSign_up_Name = this.handleSign_up_Name.bind(this);
+        this.handleSign_up_NIC = this.handleSign_up_NIC.bind(this);
+        this.handleSign_in_Email = this.handleSign_in_Email.bind(this);
+        this.handleSign_upPassword = this.handleSign_upPassword.bind(this);
+        this.handleSign_upPassword_confirm = this.handleSign_upPassword_confirm.bind(this);
+        this.handleSign_up_contact_number = this.handleSign_up_contact_number.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleSign_up_Name(e){
+        this.setState({
+                sign_up_Name: e.target.value
+            },
+            () => {
+            });
+    }
+
+    handleSign_up_NIC(e){
+        this.setState({
+                sign_up_NIC: e.target.value
+            },
+            () => {
+            });
+    }
+    handleSign_in_Email(e){
+        this.setState({
+                sign_in_Email1: e.target.value
+            },
+            () => {
+            });
+    }
+    handleSign_upPassword(e){
+        this.setState({
+                sign_upPassword: e.target.value
+            },
+            () => {
+            });
+    }
+    handleSign_upPassword_confirm(e){
+        this.setState({
+                sign_upPassword_confirm: e.target.value
+            },
+            () => {
+            });
+    }
+    handleSign_up_contact_number(e){
+        this.setState({
+                sign_up_contact_number: e.target.value
+            },
+            () => {
+            });
+    }
+
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        const userDetailsObj = {
+            sign_up_Name : this.state.sign_up_Name ,
+            sign_up_NIC : this.state.sign_up_NIC,
+            sign_in_Email1 :this.state.sign_in_Email1,
+            sign_upPassword : this.state.sign_upPassword,
+            sign_upPassword_confirm : this.state.sign_upPassword_confirm,
+            sign_up_contact_number: this.state.sign_up_contact_number
+        };
+
+        this.setState({
+            sign_up_Name : '',
+            sign_up_NIC : '',
+            sign_in_Email1 : '',
+            sign_upPassword : '',
+            sign_upPassword_confirm : '',
+            sign_up_contact_number : ''
+        });
+
+        const response = await fetch("http://localhost:4000/api/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userDetailsObj)
+        });
+
+        const responseData = await response.json();
+        console.log(responseData);
+        console.log(userDetailsObj);
+    };
+
     render() {
         return (
             <Template>
@@ -32,7 +128,7 @@ class AddStoreManager extends Component {
                                             <td style={{paddingLeft: '6rem', paddingTop: '2rem'}}>
                                                 <div className="form-group mrgine_make">
                                                     <label className="d-flex justify-content-start"
-                                                           htmlFor="exampleInputPassword1">User Name</label>
+                                                           htmlFor="exampleInputPassword1">Full Name</label>
                                                     <input type="text" className="form-control border-test"
                                                            id="sign_up_Name"
                                                     />
@@ -70,6 +166,14 @@ class AddStoreManager extends Component {
                                                     <label className="d-flex justify-content-start"
                                                            htmlFor="exampleInputPassword1">Confirm
                                                         Password</label>
+                                                    <input type="password" className="form-control border-test"
+                                                           id="sign_upPassword_confirm"
+                                                    />
+                                                </div>
+
+                                                <div className="form-group mrgine_make">
+                                                    <label className="d-flex justify-content-start"
+                                                           htmlFor="exampleInputPassword1">Contact Number</label>
                                                     <input type="password" className="form-control border-test"
                                                            id="sign_upPassword_confirm"
                                                     />

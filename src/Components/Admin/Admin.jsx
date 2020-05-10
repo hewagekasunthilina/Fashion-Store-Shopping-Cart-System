@@ -34,16 +34,16 @@ class Admin extends Component {
                                 <img className="card-img-top" src="https://www.alphashooters.com/wp-content/uploads/2019/01/sony-sel85f18-gsd-puppy-DSC00116-1300px.jpg" alt="Card image cap"/>
                                 <div className="card-body">
                                     <h5 className="card-title" id="cardTitle">Store Products</h5>
-                                    <a href="#" className="btn btn-primary"  id="linkBtn">Product List</a>
+                                    <a href="/CategoryList" className="btn btn-primary"  id="linkBtn">Product List</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <CategoryList>
+               <CategoryList>
 
-                </CategoryList>
+               </CategoryList>
 
                 <hr id="hrLine">
 

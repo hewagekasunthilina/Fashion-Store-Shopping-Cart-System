@@ -11,14 +11,14 @@ class Carousel extends Component{
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://cdn.shopify.com/s/files/1/0811/1123/t/2/assets/slideshow_3_2x.jpg?v=9261917384419235574" className="d-block w-100" alt="..."/>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Fbug_Web_compressed.jpg?alt=media&token=0a7785e8-5bff-4aaa-9450-1dcfefa82ea1" className="d-block w-100" alt="..."/>
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://assets.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2017-07/viskan.jpg?itok=76DM-0GW" className="d-block w-100" alt="..."/>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Web-Banner-5.png?alt=media&token=0dc2204e-2a96-4c7a-b717-34ddba27c4d8" className="d-block w-100" alt="..."/>
                             <div className="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
