@@ -41,6 +41,10 @@ class Admin extends Component {
                     </div>
                 </div>
 
+                <CategoryList>
+
+                </CategoryList>
+
                 <hr id="hrLine">
 
                 </hr>

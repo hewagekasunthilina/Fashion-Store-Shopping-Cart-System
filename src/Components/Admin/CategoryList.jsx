@@ -16,7 +16,6 @@ class CategoryList extends Component{
                 if (response.status === 200) {
                     this.setState({
                         data: response.data
-
                     });
 
                 } else {
@@ -33,22 +32,9 @@ class CategoryList extends Component{
         console.log(data);
         return(
 
+            <div>
 
-
-                    < div className="dropdown">
-
-                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                    </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        {Array.isArray(data) && data.map(object => (
-
-                        <a className="dropdown-item" href="#">data.category_name</a>
-
-
-                            ))}
-                    </div>
-                    </div>
+            </div>
         )
     }
 }
