@@ -32,15 +32,23 @@ class CategoryList extends Component{
         const {data} = this.state;
         console.log(data);
         return(
-            <div className="categoryList">
-                {Array.isArray(data) && data.map(object => (
-                    <p key={object.category_id}>{object.ID}</p>
 
 
 
-                ))}
-            </div>
+                    < div className="dropdown">
 
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                    </button>
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        {Array.isArray(data) && data.map(object => (
+
+                        <a className="dropdown-item" href="#">data.category_name</a>
+
+
+                            ))}
+                    </div>
+                    </div>
         )
     }
 }
