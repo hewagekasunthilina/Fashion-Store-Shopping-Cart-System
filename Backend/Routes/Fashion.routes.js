@@ -9,7 +9,7 @@ router.post("/category", (req, res, next) => {
             res.send(category);
         })
         .catch(next);
-});
+})
 
 router.get("/category", (req, res, next) => {
     Category.find({}, (err, category) => {
@@ -57,4 +57,5 @@ router.post("/signup", (req, res, next) => {
             res.send(users);
         })
         .catch(next);
+
 });
