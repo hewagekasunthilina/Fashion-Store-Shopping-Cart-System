@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 
 import Admin from "./Components/Admin/Admin";
 import StorePanel from "./Components/StoreManager/StorePanel";
+import AddProduct from "./Components/StoreManager/AddProduct";
 import Home from "./Components/Home/Home";
 
 import AddToCart from "./Components/User/AddToCart";
@@ -32,6 +33,13 @@ class Routes extends Component{
                 <Route path={"/UserProfile"} exact component={UserProfile}/>
 
                 {/**********************************************************************/}
+
+                {/************************** Store Manager Part ***************************/}
+
+                <Route path={"/AddProduct"} exact component={AddProduct}/>
+
+                {/**********************************************************************/}
+
             </Fragment>
         );
     }
