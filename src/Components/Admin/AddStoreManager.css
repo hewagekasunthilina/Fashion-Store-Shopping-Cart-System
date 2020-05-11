@@ -1,0 +1,8 @@
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+
+#addRole{
+    width: 80%;
+}
