@@ -1,23 +1,87 @@
-import React from "react";
-import milk from '../Images/milk.jpg'
+import React, {Component} from "react";
+
 
 import Template from "../Template/Template";
 
-const AddToCart = (props) => {
-    return (
-        <Template>
-            <div className="card" style="width: 18rem;">
-                <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
-            </div>
+class AddToCart extends Component{
+    constructor(props) {
+        super(props);
+        this.onChangeItemNo = this.onChangeItemNo.bind(this);
+        this.onChangeQuantity = this.onChangeQuantity.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
-        </Template>
-    )
+        this.state = {
+            item_no: '',
+            item_qty: ''
+        }
+    }
+
+    onChangeItemNo(e){
+        this.setState({
+            item_no: e.target.value
+        });
+    }
+
+    onChangeQuantity(e){
+        this.setState({
+            item_qty: e.target.value
+        });
+    }
+
+    onSubmit(e){
+        e.preventDefault();
+        console.log(`The values are ${this.state.item_no}, ${this.state.item_qty}`)
+        this.setState({
+            item_no: '',
+            item_qty: ''
+        })
+    }
+
+    render() {
+        return (
+
+            <Template>
+
+                <div style={{marginTop: '50', marginLeft: '40%'}}>
+
+                    <h3>Add To Cart</h3></div>
+                <div style={{marginTop: '50', marginLeft: '10%'}}>
+                    <h3></h3>
+
+                    <form style={{width: '50%', marginLeft: '10%'}}>
+                        <div className="form-group">
+                            <label>Item Number: </label>
+                            <input type="text" className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <label>Quantity: </label>
+                            <input type="text" className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <input type="submit" value="Add" className="btn btn-primary"/>
+
+                        </div>
+                        <div className="form-group">
+                            <input type="submit" value="Delete" className="btn btn-danger"/>
+                        </div>
+                    </form>
+                </div>
+
+                <div style={{marginTop: '50', marginLeft: '10%'}}>
+                    <form style={{width: '50%', marginLeft: '10%'}}>
+                        <div className="form-group">
+                            <input type="text" className="form-control" placeholder={"Click to Add Comment"}/></div>
+                        <div className="form-group">
+                            <input type="submit" value="Add" className="btn btn-success"/>
+                            <a href="/Payment" className="btn btn-primary" style={{marginLeft:'2.5rem'}}>Payment</a>
+                        </div>
+                    </form>
+                </div>
+
+
+            </Template>
+        )
+    }
 };
 
 export default AddToCart;
