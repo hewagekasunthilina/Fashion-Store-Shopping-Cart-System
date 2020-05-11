@@ -4,6 +4,7 @@ const router = express.Router();
 const Category = require("../Model/Fashion.model");
 const Users = require("../Model/Users.model");
 const Payment = require("../Model/Payment.model");
+const Products = require("../Model/Products.model");
 
 router.post("/category", (req, res, next) => {
     Category.create(req.body)
@@ -79,5 +80,25 @@ router.post("/signup", (req, res, next) => {
             res.send(users);
         })
         .catch(next);
+});
+
+router.post("/product", (req, res, next) => {
+    Products.create(req.body)
+        .then((products) => {
+            res.send(products);
+        })
+        .catch(next);
+});
+
+router.get("/product", (req, res, next) => {
+    Products.find({}, (err, product) => {
+        var productMap = {};
+
+        product.forEach((product) => {
+            productMap[products.id] = product;
+        });
+
+        res.send(productMap);
+    }).catch(next);
 });
 
