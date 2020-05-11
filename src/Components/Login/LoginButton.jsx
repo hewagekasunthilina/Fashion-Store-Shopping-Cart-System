@@ -1,114 +1,73 @@
 import React, {Component} from 'react';
 import Template from "../Template/Template";
 import "./Login.css";
+import {login} from "./UserFunctions";
+import {register} from "./UserFunctions";
+
 class LoginButton extends Component {
 
-    constructor(props) {
-        super(props);
-        //setting up initial state
-        this.state= {
-            sign_up_Name : '',
-            sign_up_NIC : '',
-            sign_in_Email1 : '',
-            sign_upPassword : '',
-            sign_upPassword_confirm : ''
-        };
+    constructor() {
+        super();
+        this.state = {
+            sign_up_Name: '',
+            sign_up_NIC:'',
+            sign_up_Mobile:'',
+            sign_up_Address: '',
+            sign_in_Email1:'',
+            sign_upPassword:'',
+            user_type: 'user'
+            }
 
-        this.handleSign_up_Name = this.handleSign_up_Name.bind(this);
-        this.handleSign_up_NIC = this.handleSign_up_NIC.bind(this);
-        this.handleSign_in_Email = this.handleSign_in_Email.bind(this);
-        this.handleSign_upPassword = this.handleSign_upPassword.bind(this);
-        this.handleSign_upPassword_confirm = this.handleSign_upPassword_confirm.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+            this.onChange = this.onChange.bind(this);
+            this.onSubmit = this.onSubmit.bind(this);
+            this.onChangeReg = this.onChangeReg.bind(this);
+            this.onSubmitReg= this.onSubmitReg.bind(this);
 
     }
 
-       handleSign_up_Name(e){
-            this.setState({
-                    sign_up_Name: e.target.value
-                },
-                () => {
-                });
+    onChange(e){
+        this.setState({[e.target.name] : e.target.value})
+    }
+    onSubmit(e)
+    {
+        e.preventDefault()
+        const user = {
+            sign_in_Email1: this.state.sign_in_Email1,
+            sign_upPassword: this.state.sign_upPassword,
         }
 
-    handleSign_up_NIC(e){
-        this.setState({
-                sign_up_NIC: e.target.value
-            },
-            () => {
-            });
-    }
-    handleSign_in_Email(e){
-        this.setState({
-                sign_in_Email1: e.target.value
-            },
-            () => {
-            });
-    }
-    handleSign_upPassword(e){
-        this.setState({
-                sign_upPassword: e.target.value
-            },
-            () => {
-            });
-    }
-    handleSign_upPassword_confirm(e){
-        this.setState({
-                sign_upPassword_confirm: e.target.value
-            },
-            () => {
-            });
+        login(user).then(res => {
+            if(res){
+                this.props.history.push(`/`)
+            }
+        })
     }
 
-    handleSubmit = async (e) => {
-        e.preventDefault();
-        const userDetailsObj = {
-            sign_up_Name : this.state.sign_up_Name ,
-            sign_up_NIC : this.state.sign_up_NIC,
-            sign_in_Email1 :this.state.sign_in_Email1,
-            sign_upPassword : this.state.sign_upPassword,
-            sign_upPassword_confirm : this.state.sign_upPassword_confirm
-        };
+    onChangeReg(e){
+        this.setState({[e.target.name] : e.target.value})
+    }
 
-        this.setState({
-            sign_up_Name : '',
-            sign_up_NIC : '',
-            sign_in_Email1 : '',
-            sign_upPassword : '',
-            sign_upPassword_confirm : ''
-        });
+    onSubmitReg(e)
+    {
+        e.preventDefault()
+        const user_reg = {
+            sign_up_Name: this.state.sign_up_Name,
+            sign_up_NIC:this.state.sign_up_NIC,
+            sign_up_Mobile:this.state.sign_up_Mobile,
+            sign_up_Address: this.state.sign_up_Address,
+            sign_in_Email1:this.state.sign_in_Email1,
+            sign_upPassword:this.state.sign_upPassword,
+            user_type: this.state.user_type
+        }
 
-        const response = await fetch("http://localhost:4000/api/signup", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(userDetailsObj)
-        });
+        register(user_reg).then(res => {
+            console.log(user_reg);
 
-        const responseData = await response.json();
-        console.log(responseData);
-        console.log(userDetailsObj);
-    };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if(res){
+                this.props.history.push(`/login`)
+            }
+        })
+    }
 
 
     render() {
@@ -133,22 +92,31 @@ class LoginButton extends Component {
                                     <div className="d-flex justify-content-center">
                                         <h4>LOG-IN</h4>
                                     </div>
-                                    <form>
+                                    <form onSubmit={this.onSubmit}>
                                         <div className="form-group">
                                             <label className="d-flex justify-content-start"
                                                    htmlFor="exampleInputEmail1">Email
                                                 address</label>
                                             <input type="email" className="form-control border-test"
                                                    id="exampleInputEmail1"
-                                                   aria-describedby="emailHelp"/>
+                                                   aria-describedby="emailHelp"
+                                                   placeholder="Enter Email Address"
+                                                   // value={this.state.sign_in_Email1}
+                                                   onChange={this.onChange}
+                                            />
                                         </div>
                                         <div className="form-group">
                                             <label className="d-flex justify-content-start"
                                                    htmlFor="exampleInputPassword1">Password</label>
                                             <input type="password" className="form-control border-test"
-                                                   id="exampleInputPassword"/>
+                                                   id="exampleInputPassword"
+                                                   placeholder="Enter Password"
+                                                   //value={this.state.sign_upPassword}
+                                                   onChange={this.onChange}
+                                            />
                                         </div>
-                                        <a href="/UserProfile" type="submit" className="btn btn-primary mrgine_make" onClick="">LOG IN
+                                        <a  type="submit" className="btn btn-primary mrgine_make"
+                                           onClick="">LOG IN
                                         </a>
                                     </form>
                                 </div>
@@ -159,24 +127,15 @@ class LoginButton extends Component {
                                     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    <form onSubmit={this.handleSubmit} action="/Backend/Routes/Fashion.routes.js" method="POST">
+                                    <form onSubmit={this.onSubmitReg} action="/Backend/Routes/Fashion.routes.js"
+                                          method="POST">
+                                        <div>
+                                            <input type="file" className=""
+                                            id="sign_up_img"
+                                            onChange={this.handleSign_up_img}
+                                            //value={this.state.sign_up_img}
+                                            />
+                                        </div>
                                         <table>
                                             <td>
                                                 <div className="form-group mrgine_make">
@@ -185,18 +144,38 @@ class LoginButton extends Component {
                                                     <input type="text" className="form-control border-test"
                                                            id="sign_up_Name"
 
-                                                           onChange={this.handleSign_up_Name}
-                                                           value={this.state.sign_up_Name}/>
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.sign_up_Name}
+                                                    />
                                                 </div>
                                                 <div className="form-group mrgine_make">
                                                     <label className="d-flex justify-content-start"
                                                            htmlFor="exampleInputPassword1">NIC</label>
                                                     <input type="text" className="form-control border-test"
                                                            id="sign_up_NIC"
-                                                           onChange={this.handleSign_up_NIC}
-                                                           value={this.state.sign_up_NIC}/>
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.sign_up_NIC}
+                                                    />
                                                 </div>
-                                               </td>
+                                                <div className="form-group mrgine_make">
+                                                    <label className="d-flex justify-content-start"
+                                                           htmlFor="exampleInputPassword1">Mobile</label>
+                                                    <input type="text" className="form-control border-test"
+                                                           id="sign_up_Mobile"
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.sign_up_Mobile}
+                                                    />
+                                                </div>
+                                                <div className="form-group mrgine_make">
+                                                    <label className="d-flex justify-content-start"
+                                                           htmlFor="exampleInputPassword1">Address</label>
+                                                    <input type="text" className="form-control border-test"
+                                                           id="sign_up_Address"
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.sign_up_Address}
+                                                    />
+                                                </div>
+                                            </td>
                                             <td>
 
                                                 <div className="form-group mrgine_make">
@@ -206,26 +185,37 @@ class LoginButton extends Component {
                                                     <input type="email" className="form-control border-test"
                                                            id="sign_in_Email1"
                                                            aria-describedby="emailHelp"
-                                                           onChange={this.handleSign_in_Email}
-                                                           value={this.state.sign_in_Email1}/>
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.sign_in_Email1}
+                                                    />
                                                 </div>
                                                 <div className="form-group mrgine_make">
                                                     <label className="d-flex justify-content-start"
                                                            htmlFor="exampleInputPassword1">Password</label>
                                                     <input type="password" className="form-control border-test"
                                                            id="sign_upPassword"
-                                                           onChange={this.handleSign_upPassword}
-                                                           value={this.state.sign_upPassword}/>
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.sign_upPassword}
+                                                    />
                                                 </div>
                                                 <div className="form-group mrgine_make">
                                                     <label className="d-flex justify-content-start"
                                                            htmlFor="exampleInputPassword1">Confirm
                                                         Password</label>
                                                     <input type="password" className="form-control border-test"
-                                                           id="sign_upPassword_confirm"
-                                                           onChange={this.handleSign_upPassword_confirm}
-                                                           value={this.state.sign_upPassword_confirm}/>
+                                                           id="sign_upPassword_confirm"/>
                                                 </div>
+
+                                                <div className="form-group mrgine_make hidden">
+                                                    <label className="d-flex justify-content-start"
+                                                           htmlFor="exampleInputPassword1">User Type</label>
+                                                    <input type="text" className="form-control border-test"
+                                                           id="user_type"
+                                                           onChange={this.onChangeReg}
+                                                           //value={this.state.user_type}
+                                                    />
+                                                </div>
+
                                             </td>
                                         </table>
                                         <button type="submit" className="btn btn-primary mrgine_make">SIGN IN</button>
