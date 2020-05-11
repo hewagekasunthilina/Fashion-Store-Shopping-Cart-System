@@ -74,7 +74,6 @@ router.get("/payment", (req, res, next) => {
     }).catch(next);
 });
 
-
 router.post("/signup", (req, res, next) => {
     Users.create(req.body)
         .then((users) => {

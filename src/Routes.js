@@ -12,6 +12,7 @@ import Payment from "./Components/User/Payment";
 
 import LoginButton from "./Components/Login/LoginButton";
 import UserProfile from "./Components/Profile/UserProfile";
+import CategoryList from "./Components/Admin/CategoryList";
 
 class Routes extends Component{
     render() {
@@ -26,9 +27,8 @@ class Routes extends Component{
                 <Route path={"/AddCategory"} exact component={AddCategory}/>
                 <Route path={"/BackAdmin"} exact component={Admin}/>
                 <Route path={"/AddStoreManager"} exact component={AddStoreManager}/>
-
+                <Route path={"/CategoryList"} exact component={CategoryList}/>
                 <Route path={"/Payment"} exact component={Payment}/>
-
                 <Route path={"/UserProfile"} exact component={UserProfile}/>
 
                 {/**********************************************************************/}
