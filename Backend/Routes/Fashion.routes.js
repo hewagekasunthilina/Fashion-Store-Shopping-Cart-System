@@ -74,15 +74,6 @@ router.get("/payment", (req, res, next) => {
     }).catch(next);
 });
 
-router.post("/signup", (req, res, next) => {
-    Users.create(req.body)
-        .then((users) => {
-            res.send(users);
-        })
-        .catch(next);
-
-});
-
 router.post("/product", (req, res, next) => {
     Products.create(req.body)
         .then((products) => {
@@ -102,4 +93,36 @@ router.get("/product", (req, res, next) => {
         res.send(productMap);
     }).catch(next);
 });
+
+
+router.post("/signup", (req, res, next) => {
+    Users.create(req.body)
+        .then((users) => {
+            res.send(users);
+        })
+        .catch(next);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

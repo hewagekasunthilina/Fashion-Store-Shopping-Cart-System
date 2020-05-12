@@ -25,9 +25,9 @@ const Template = (props) => {
             name: 'User'
         },
         {
-            url: '/LoginButton',
-            route: 'LoginButton',
-            name: 'My_Test'
+            url: '/Login',
+            route: 'login',
+            name: 'Login',
 
         },
     ];
