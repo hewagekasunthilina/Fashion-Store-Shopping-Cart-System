@@ -1,73 +1,72 @@
 import React, {Component} from 'react';
 import Template from "../Template/Template";
 import "./Login.css";
-import {login} from "./UserFunctions";
-import {register} from "./UserFunctions";
+
 
 class LoginButton extends Component {
+    //
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         sign_up_Name: '',
+    //         sign_up_NIC:'',
+    //         sign_up_Mobile:'',
+    //         sign_up_Address: '',
+    //         sign_in_Email1:'',
+    //         sign_upPassword:'',
+    //         user_type: 'user'
+    //         }
+    //
+    //         this.onChange = this.onChange.bind(this);
+    //         this.onSubmit = this.onSubmit.bind(this);
+    //         this.onChangeReg = this.onChangeReg.bind(this);
+    //         this.onSubmitReg= this.onSubmitReg.bind(this);
+    //
+    // }
+    //
+    // onChange(e){
+    //     this.setState({[e.target.name] : e.target.value})
+    // }
+    // onSubmit(e)
+    // {
+    //     e.preventDefault()
+    //     const user = {
+    //         sign_in_Email1: this.state.sign_in_Email1,
+    //         sign_upPassword: this.state.sign_upPassword,
+    //     };
 
-    constructor() {
-        super();
-        this.state = {
-            sign_up_Name: '',
-            sign_up_NIC:'',
-            sign_up_Mobile:'',
-            sign_up_Address: '',
-            sign_in_Email1:'',
-            sign_upPassword:'',
-            user_type: 'user'
-            }
+    //     login(user).then(res => {
+    //         if(res){
+    //             this.props.history.push(`/`)
+    //         }
+    //     })
+    // }
 
-            this.onChange = this.onChange.bind(this);
-            this.onSubmit = this.onSubmit.bind(this);
-            this.onChangeReg = this.onChangeReg.bind(this);
-            this.onSubmitReg= this.onSubmitReg.bind(this);
+    // onChangeReg(e){
+    //     this.setState({[e.target.name] : e.target.value})
+    // }
+    //
+    // onSubmitReg(e)
+    // {
+    //     e.preventDefault()
+    //     const user_reg = {
+    //         sign_up_Name: this.state.sign_up_Name,
+    //         sign_up_NIC:this.state.sign_up_NIC,
+    //         sign_up_Mobile:this.state.sign_up_Mobile,
+    //         sign_up_Address: this.state.sign_up_Address,
+    //         sign_in_Email1:this.state.sign_in_Email1,
+    //         sign_upPassword:this.state.sign_upPassword,
+    //         user_type: this.state.user_type
+    //     };
 
-    }
-
-    onChange(e){
-        this.setState({[e.target.name] : e.target.value})
-    }
-    onSubmit(e)
-    {
-        e.preventDefault()
-        const user = {
-            sign_in_Email1: this.state.sign_in_Email1,
-            sign_upPassword: this.state.sign_upPassword,
-        }
-
-        login(user).then(res => {
-            if(res){
-                this.props.history.push(`/`)
-            }
-        })
-    }
-
-    onChangeReg(e){
-        this.setState({[e.target.name] : e.target.value})
-    }
-
-    onSubmitReg(e)
-    {
-        e.preventDefault()
-        const user_reg = {
-            sign_up_Name: this.state.sign_up_Name,
-            sign_up_NIC:this.state.sign_up_NIC,
-            sign_up_Mobile:this.state.sign_up_Mobile,
-            sign_up_Address: this.state.sign_up_Address,
-            sign_in_Email1:this.state.sign_in_Email1,
-            sign_upPassword:this.state.sign_upPassword,
-            user_type: this.state.user_type
-        }
-
-        register(user_reg).then(res => {
-            console.log(user_reg);
-
-            if(res){
-                this.props.history.push(`/login`)
-            }
-        })
-    }
+    //     register(user_reg).then(res => {
+    //         console.log(user_reg);
+    //
+    //         if(res){
+    //             this.props.history.push(`/login`)
+    //         }
+    //     })
+    // }
 
 
     render() {
