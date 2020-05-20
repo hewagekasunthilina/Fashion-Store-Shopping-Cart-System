@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5f07cb5-75fd-4b13-b051-7eba302168d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../af-assignment-backend-node-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-backend-node-master/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/ItemsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ItemsPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
       <updated>1589994283393</updated>
       <workItem from="1589994295803" duration="25000" />
       <workItem from="1589994366999" duration="384000" />
-      <workItem from="1589995470024" duration="1335000" />
+      <workItem from="1589995470024" duration="1687000" />
     </task>
     <servers />
   </component>

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1ff863-5b7a-4b02-9054-b1d72b1fd622" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Pages/ItemsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Pages/ItemsPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
