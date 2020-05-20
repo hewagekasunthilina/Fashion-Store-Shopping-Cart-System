@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f1ff863-5b7a-4b02-9054-b1d72b1fd622" name="Default Changelist" comment="" />
+    <list default="true" id="9f1ff863-5b7a-4b02-9054-b1d72b1fd622" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Pages/ItemsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Pages/ItemsPage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +15,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1cBG0uw4mi3SZsZoKEDo6OO942X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -34,6 +39,7 @@
       <updated>1589994353649</updated>
       <workItem from="1589994355020" duration="405000" />
       <workItem from="1589994838125" duration="4000" />
+      <workItem from="1589995455642" duration="676000" />
     </task>
     <servers />
   </component>
