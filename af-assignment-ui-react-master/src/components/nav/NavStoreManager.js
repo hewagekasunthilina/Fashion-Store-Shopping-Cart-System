@@ -1,34 +1,30 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 class NavStoreManager extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selectedItems: [], selectedItemCount: 0 };
+    this.state = { selectedItemCount: 0, user: this.props.user };
 
-    this.onItemsNavClick = this.onItemsNavClick.bind(this);
-    this.onAddItemNavClick = this.onAddItemNavClick.bind(this);
-    this.onEditItemsNavClick = this.onEditItemsNavClick.bind(this);
-    this.onLogOutNavClick = this.onLogOutNavClick.bind(this);
+    this.onNavItemClick = this.onNavItemClick.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ selectedItemCount: nextProps.selectedItemCount });
+    this.setState({ selectedItemCount: nextProps.selectedItemCount, user: nextProps.user });
   }
 
-  onItemsNavClick() {
-    this.props.goToPage('ItemsPage');
-  }
+  onNavItemClick(e) {
+    let clickedItem = e.target.id;
 
-  onAddItemNavClick() {
-    this.props.goToPage('AddItemPage');
-  }
-
-  onEditItemsNavClick() {
-    this.props.goToPage('EditItemsPage');
-  }
-
-  onLogOutNavClick() {
-    this.props.logout();
+    switch (clickedItem) {
+      case "items": this.props.goToPage("ItemsPage"); break;
+      case "add-item": this.props.goToPage("AddItemPage"); break;
+      case "edit-items": this.props.goToPage("EditItemsPage"); break;
+      case "cart": this.props.goToPage("ShoppingCartPage"); break;
+      case "name": this.props.goToPage("Profile"); break;
+      case "logout": this.props.logout(); break;
+    }
   }
 
   render() {
@@ -53,26 +49,35 @@ class NavStoreManager extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span className="nav-link" href="#" onClick={this.onItemsNavClick}>
+                <span id="items" className="nav-link" href="#" onClick={this.onNavItemClick}>
                   Items
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#" onClick={this.onAddItemNavClick}>
+                <span id="add-item" className="nav-link" href="#" onClick={this.onNavItemClick}>
                   Add Item
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#" onClick={this.onEditItemsNavClick}>
+                <span id="edit-items" className="nav-link" href="#" onClick={this.onNavItemClick}>
                   Edit Items
                 </span>
               </li>
             </ul>
-            <span style={{ marginLeft: "2rem" }}>
-              <span className="btn btn-sm btn-outline-danger" href="#" onClick={this.onLogOutNavClick}>
-                Log out
+            <span id="name" onClick={this.onNavItemClick}>
+              Hi {this.state.user.name}!
+            </span>
+            <span id="cart" onClick={this.onNavItemClick} style={{ marginLeft: "2rem" }}>
+              <FontAwesomeIcon id="cart" icon={faShoppingCart}/>
+              <span id="cart" onClick={this.onNavItemClick} className="badge badge-pill badge-primary">
+                {this.state.selectedItemCount}
               </span>
             </span>
+            <span id="logout" style={{ marginLeft: "2rem" }}>
+                <span id="logout" className="btn btn-sm btn-outline-danger" href="#" onClick={this.onNavItemClick}>
+                  Log out
+                </span>
+              </span>
           </div>
         </div>
       </nav>

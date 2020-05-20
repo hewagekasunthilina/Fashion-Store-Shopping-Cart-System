@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 class ItemCard extends React.Component {
   constructor(props) {
@@ -59,6 +60,18 @@ class ItemCard extends React.Component {
         </div>
         <div className="card-body">
           <h5 className="card-title">{this.state.item.title}</h5>
+          <div className="row align-items-center justify-content-center">
+            <span class="badge badge-pill badge-disabled">
+              <small>{this.state.item.category}</small>
+            </span>
+            <span style={{ marginRight: ".5rem" }}>
+              <FontAwesomeIcon icon={faStar} color="orange"/>
+              <small>
+                ({this.state.item.averageRating ? this.state.item.averageRating : 0})
+              </small>
+            </span>
+          </div>
+          <br />
           <small className="card-text">{this.state.item.body}</small>
           <hr />
           <span>

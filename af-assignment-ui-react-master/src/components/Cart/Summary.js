@@ -57,7 +57,7 @@ class Summary extends React.Component {
         <div className={this.state.cardClasses}>
           <div className="card-body">
             <h5 className="card-title">Payment</h5>
-            <form>
+            <div>
               <div className="form-group">
                 <small>Product(s) Total</small><br />
                 <label>{this.state.totalPrice}</label>
@@ -98,7 +98,7 @@ class Summary extends React.Component {
                   <label className="form-check-label" for="master">Master</label>
                 </div>
               </div>
-            </form>
+            </div>
             <ul>
               {this.state.warnings.map((warning, index) => {
                 return(<li><small className="text-danger">{warning}</small></li>)
