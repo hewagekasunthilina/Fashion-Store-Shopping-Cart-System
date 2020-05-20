@@ -1,34 +1,32 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 class NavAdmin extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { selectedItemCount: 0, user: this.props.user };
 
-    this.onItemsNavClick = this.onItemsNavClick.bind(this);
-    this.onAddManagerUserNavClick = this.onAddManagerUserNavClick.bind(this);
-    this.onAddCategoryNavClick = this.onAddCategoryNavClick.bind(this);
-    this.onLogOutNavClick = this.onLogOutNavClick.bind(this);
+    this.onNavItemClick = this.onNavItemClick.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ selectedItemCount: nextProps.selectedItemCount });
+    this.setState({ selectedItemCount: nextProps.selectedItemCount, user: nextProps.user });
   }
 
-  onItemsNavClick() {
-    this.props.goToPage('ItemsPage');
-  }
+  onNavItemClick(e) {
+    let clickedItem = e.target.id;
 
-  onAddManagerUserNavClick() {
-    this.props.goToPage('AddManagerUser');
-  }
-
-  onAddCategoryNavClick() {
-    this.props.goToPage('AddCategoryPage');
-  }
-
-  onLogOutNavClick() {
-    this.props.logout();
+    switch (clickedItem) {
+      case "items": this.props.goToPage("ItemsPage"); break;
+      case "add-user": this.props.goToPage("AddManagerUser"); break;
+      case "edit-users": this.props.goToPage("EditUsers"); break;
+      case "add-category": this.props.goToPage("AddCategoryPage"); break;
+      case "edit-categories": this.props.goToPage("EditCategoriesPage"); break;
+      case "cart": this.props.goToPage("ShoppingCartPage"); break;
+      case "name": this.props.goToPage("Profile"); break;
+      case "logout": this.props.logout(); break;
+    }
   }
 
   render() {
@@ -53,23 +51,42 @@ class NavAdmin extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span className="nav-link" href="#" onClick={this.onItemsNavClick}>
+                <span id="items" className="nav-link" href="#" onClick={this.onNavItemClick}>
                   Items
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#" onClick={this.onAddManagerUserNavClick}>
-                  Add Store Manager
+                <span id="add-user" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                  Add Management User
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#" onClick={this.onAddCategoryNavClick}>
+                <span id="edit-users" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                  Edit Management Users
+                </span>
+              </li>
+              <li className="nav-item">
+                <span id="add-category" className="nav-link" href="#" onClick={this.onNavItemClick}>
                   Add Category
                 </span>
               </li>
+              <li className="nav-item">
+                <span id="edit-categories" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                  Edit Categories
+                </span>
+              </li>
             </ul>
-            <span style={{ marginLeft: "2rem" }}>
-                <span className="btn btn-sm btn-outline-danger" href="#" onClick={this.onLogOutNavClick}>
+            <span id="name" onClick={this.onNavItemClick}>
+              Hi {this.state.user.name}!
+            </span>
+            <span id="cart" onClick={this.onNavItemClick} style={{ marginLeft: "2rem" }}>
+              <FontAwesomeIcon id="cart" icon={faShoppingCart} />
+              <span id="cart" onClick={this.onNavItemClick} className="badge badge-pill badge-primary">
+                {this.state.selectedItemCount}
+              </span>
+            </span>
+            <span id="logout" style={{ marginLeft: "2rem" }}>
+                <span id="logout" className="btn btn-sm btn-outline-danger" href="#" onClick={this.onNavItemClick}>
                   Log out
                 </span>
               </span>

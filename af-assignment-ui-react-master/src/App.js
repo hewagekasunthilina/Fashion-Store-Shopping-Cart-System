@@ -14,6 +14,9 @@ import LoginRegisterCustomer from "./components/User/LoginRegisterCustomer";
 import IndividualItemPage from "./components/Pages/IndividualItemPage";
 import WishlistPage from "./components/Pages/WishlistPage";
 import AddCategoryPage from "./components/Pages/AddCategoryPage";
+import EditUsersPage from "./components/Pages/EditUsersPage";
+import EditProfile from "./components/User/EditProfile";
+import EditCategoriesPage from "./components/Pages/EditCategoriesPage";
 
 class App extends React.Component {
     constructor(props) {
@@ -39,7 +42,8 @@ class App extends React.Component {
         this.makePayment = this.makePayment.bind(this);
         this.logOutUser = this.logOutUser.bind(this);
         this.addToWishList = this.addToWishList.bind(this);
-		this.handleSession = this.handleSession.bind(this);
+        this.handleSession = this.handleSession.bind(this);
+        this.updateProfile = this.updateProfile.bind(this);
 
         // Navigation.
         this.goToShoppingCart = this.goToShoppingCart.bind(this);
@@ -64,10 +68,17 @@ class App extends React.Component {
     }
 	
 	handleSession() {
+        // See if the user is logged in.
 		if (localStorage.getItem("user") != null) {
 			let user = localStorage.getItem("user");
 			user = JSON.parse(user);
-			this.setState({ user: user, role: user.role }, () => { this.goToItems() });
+            this.setState({ user: user, role: user.role }, () => {
+                // Take the user back to the last visited page.
+                if (localStorage.getItem("lastVisitedPage") != null) {
+                    let lastVisitedPage = localStorage.getItem("lastVisitedPage");
+                    this.setState({ whereTo: lastVisitedPage });
+                }
+            });
 		}
 	}
 
@@ -138,12 +149,13 @@ class App extends React.Component {
 
     onSuccessfulLogin(user) {
         this.setState({ user: user, role: user.role }, this.goToItems());
-		localStorage.setItem("user", JSON.stringify(user));
+		    localStorage.setItem("user", JSON.stringify(user));
     }
 
     logOutUser() {
         this.setState({ user: {}, role: "", whereTo: "LoginRegister" })
 		localStorage.removeItem("user");
+		localStorage.removeItem("lastVisitedPage");
     }
 
     addToWishList(item) {
@@ -157,7 +169,20 @@ class App extends React.Component {
         	axios.post(`/users/${email}/wishlist`, { item })
             .then(res => console.log(res.data))
             .catch(error => console.log(error));
-		}
+		  }
+    }
+
+    updateProfile(user) {
+      axios.put('/users', { user })
+      .then(res => { 
+        if (res.data.successful) {
+          alert(`User ${user.name} updated successfully`); 
+          localStorage.setItem("user", JSON.stringify(user));
+          this.setState({ user: user });
+        }
+        else alert(`User ${user.name} failed to update because ${res.data.body}`);
+      })
+      .catch(error => { alert(`User ${user.name} failed to update because ${error}`); })
     }
 
     /*
@@ -170,6 +195,7 @@ class App extends React.Component {
     }
     goToPage(page) {
         this.setState({ whereTo: page });
+        localStorage.setItem("lastVisitedPage", page);
     }
     goToShoppingCart() {
         this.setState({ whereTo: "ShoppingCartPage" });
@@ -205,7 +231,8 @@ class App extends React.Component {
                 viewItem = { this.viewItem }
                 />; break;
             case "Item":
-                body = < IndividualItemPage item = { this.state.selectedItem }
+                body = < IndividualItemPage user={ this.state.user }  
+                item = { this.state.selectedItem }
                 addItemToCart = { this.addItemToCart }
                 />; break;
             case "ShoppingCartPage":
@@ -217,16 +244,25 @@ class App extends React.Component {
                 makePayment = { this.makePayment }
                 />; break;
             case "AddItemPage":
-                body = < AddItemPage / > ;
+                body = < AddItemPage /> ;
                 break;
             case "EditItemsPage":
-                body = < EditItemsPage / > ;
+                body = < EditItemsPage /> ;
                 break;
             case "AddManagerUser":
-                body = < AddManagerUser / > ;
+                body = < AddManagerUser /> ;
+                break;
+            case "EditUsers":
+                body = < EditUsersPage /> ;
                 break;
             case "AddCategoryPage":
-                body = < AddCategoryPage / > ;
+                body = < AddCategoryPage /> ;
+                break;
+            case "EditCategoriesPage":
+                body = < EditCategoriesPage /> ;
+                break;
+            case "Profile":
+                body = < EditProfile user={this.state.user} updateProfile={this.updateProfile}/> ;
                 break;
             default:
                 body = < LoginRegisterCustomer onSuccessfulLogin = { this.onSuccessfulLogin }
@@ -243,11 +279,16 @@ class App extends React.Component {
                 logout = { this.logOutUser }
                 />; break;
             case "admin":
-                nav = < NavAdmin goToPage = { this.goToPage }
+              console.log(this.state.user);
+                nav = < NavAdmin user = { this.state.user }
+                goToPage = { this.goToPage }
+                selectedItemCount = { this.state.selectedItemCount }
                 logout = { this.logOutUser }
                 />; break;
             case "manager":
-                nav = < NavStoreManager goToPage = { this.goToPage }
+                nav = < NavStoreManager user = { this.state.user }
+                selectedItemCount = { this.state.selectedItemCount }
+                goToPage = { this.goToPage }
                 logout = { this.logOutUser }
                 />; break;
             default:
@@ -255,12 +296,11 @@ class App extends React.Component {
                 />; break;
         }
 
-        return ( <
-            div >
-            <
-            div > { nav } < /div> <
-            div className = "container-fluid" > { body } < /div> < /
-            div >
+        return ( 
+            <div >
+            <div > { nav } </div> 
+            <div className = "container-fluid" > { body } </div> 
+            </div >
         );
     }
 }

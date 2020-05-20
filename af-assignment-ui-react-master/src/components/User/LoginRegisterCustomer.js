@@ -98,7 +98,7 @@ class LoginRegisterCustomer extends React.Component {
         <div className={this.state.regCardClass} style={{ margin: ".5rem", padding: ".5rem"}}>
             <div className="card-body">
               <h5 className="card-title">Register</h5>
-              <form>
+              <div>
                 <div className="form-group">
                   <small>Name</small><br />
                   <input ref={this.regName} className={this.state.regNameInputClass} type="text" placeholder="Gayan Perera" />
@@ -111,7 +111,7 @@ class LoginRegisterCustomer extends React.Component {
                   <small>Password</small><br />
                   <input ref={this.regPassword} className={this.state.regPasswordInputClass} type="password" placeholder="shush!"/>
                 </div>
-              </form>
+              </div>
               <br />
               <button href="#" className="btn btn-secondary btn-block align-self-end" onClick={this.onRegBtnClick}>Register</button>
             </div>
@@ -122,7 +122,7 @@ class LoginRegisterCustomer extends React.Component {
           <div className={this.state.loginCardClass} style={{ margin: ".5rem", padding: ".5rem"}}>
             <div className="card-body">
               <h5 className="card-title">Login</h5>
-              <form>
+              <div>
                 <div className="form-group">
                   <small>Email</small><br />
                   <input ref={this.loginEmail} className={this.state.loginEmailInputClass} type="text" placeholder="gaya.perera@gmail.com"/>
@@ -131,7 +131,7 @@ class LoginRegisterCustomer extends React.Component {
                   <small>Password</small><br />
                   <input ref={this.loginPassword} className={this.state.loginPasswordInputClass} type="password" placeholder="shush!"/>
                 </div>
-              </form>
+              </div>
               <br />
               <button href="#" className="btn btn-primary btn-block" onClick={this.onLoginBtnClick}>Login</button>
             </div>

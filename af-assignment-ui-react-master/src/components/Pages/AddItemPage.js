@@ -30,7 +30,7 @@ class AddItemPage extends React.Component {
   componentDidMount() { this.fetchCategories() }
 
   fetchCategories() {
-    axios.get('/items/categories')
+    axios.get('/categories')
     .then(res => {
       if (res.data.successful) this.setState({ categories: res.data.body });
       else alert(`Unable to load categories because ${res.data.body}`);
@@ -93,7 +93,7 @@ class AddItemPage extends React.Component {
         <div className={this.formClass}>
           <div className="card-body">
             <h5 className="card-title">Add an Item</h5>
-            <form>
+            <div>
               <div className="form-group">
                 <small>Name</small><br />
                 <input ref={this.name} type="text" className={this.state.nameClass}  placeholder="V-Collar T Shirt"/>
@@ -114,7 +114,7 @@ class AddItemPage extends React.Component {
                 <small>Description</small><br />
                 <input ref={this.body} type="text" className={this.state.descriptionClass}  placeholder="Available in M, L, XL, XXL"/>
               </div>
-            </form>
+            </div>
             <br />
             <button href="#" className="btn btn-outline-primary btn-block" onClick={this.onAddItemBtnClick}>Add Item</button>
           </div>

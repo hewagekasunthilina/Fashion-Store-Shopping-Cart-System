@@ -60,7 +60,7 @@ class AddManagerUser extends React.Component {
         <div className={this.state.cardClass}>
           <div className="card-body">
             <h5 className="card-title">Add Store Manager</h5>
-            <form>
+            <div>
               <div className="form-group">
                 <small>Name</small><br />
                 <input ref={this.name} type="text" className={this.state.nameClass} placeholder="Gayan Perera"/>
@@ -73,11 +73,11 @@ class AddManagerUser extends React.Component {
                 <small>Password</small><br />
                 <input ref={this.password} type="password" className={this.state.passwordClass} placeholder="shush!"/>
               </div>
-			  <div className="form-group">
+              <div className="form-group">
                 <small>User Type</small><br />
                   <select ref={this.role} className="form-control">{ this.state.roles.map((role, index) => { return(<option>{role}</option>) })} </select>
               </div>
-            </form>
+            </div>
             <br />
             <button href="#" className="btn btn-outline-primary btn-block" onClick={this.onAddUserBtnClick}>Add User</button>
           </div>

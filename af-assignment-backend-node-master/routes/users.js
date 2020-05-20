@@ -20,6 +20,14 @@ mongoClient
         console.log(error);
     });
 
+/* GET all users */
+router.get("/", function(req, res, next) {
+    usersCollection.find().toArray((error, users) => {
+        if (users) res.send({ successful: true, body: users });
+        else res.send({ successful: false, body: error });
+    })
+});
+
 /* ADD new store manager */
 router.post("/managers", function(req, res, next) {
     let user = req.body.user;
@@ -47,6 +55,25 @@ router.post("/customers", function(req, res, next) {
         if (error) res.send({ successful: false, body: error.errmsg });
         else if (user) res.send({ successful: true });
     });
+});
+
+/* UPDATE user */
+router.put("/", function(req, res, next) {
+    let user = req.body.user;
+
+    usersCollection.updateOne({ _id: user.email }, { $set: user }, (error, result) => {
+        if (error) res.send({ successful: false, body: error });
+        else res.send({ successful: true });
+    });
+})
+
+/* DELETE user */
+router.delete("/:email", function(req, res, next) {
+    let email = req.params.email;
+    usersCollection.remove({ _id: email }, (error, result) => {
+        if (result) res.send({ successful: true });
+        else res.send({ successful: false });
+    })
 });
 
 /* LOGIN */
@@ -91,7 +118,7 @@ router.get("/:id/wishlist", function(req, res, next) {
 
     usersCollection.findOne({ _id: email }, { wishlist: 1 },
         (error, result) => {
-            if (result) {
+            if (result.wishlist) {
                 // Remove reviews and other unnecessary fields from each item in the wishlist.
                 let wishlist = [];
                 result.wishlist.forEach(item => {

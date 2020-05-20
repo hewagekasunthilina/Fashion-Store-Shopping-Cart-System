@@ -23,7 +23,7 @@ class AddCategoryPage extends React.Component {
 	  
 	if (validForm) {
 		let category = { name: this.name.current.value, description: this.description.current.value };
-		axios.post('/items/categories', { category })
+		axios.post('/categories', { category })
 		.then(res => {
 		  if (res.data.successful) alert(`${category.name} added`);
 		  else alert(`Unable to add ${category.name} because ${res.data.body}`);
@@ -33,7 +33,6 @@ class AddCategoryPage extends React.Component {
   }
 	
   validateAddCategoryForm() {
-	  console.log("---");
 	  let name = this.name.current.value;
 	  let description = this.description.current.value;
 	  let invalidForm = (name === "" || description === "");
@@ -51,7 +50,7 @@ class AddCategoryPage extends React.Component {
         <div className={this.state.cardClass}>
           <div className="card-body">
             <h5 className="card-title">Add Category</h5>
-            <form>
+            <div>
               <div className="form-group">
                 <small>Name</small><br />
                 <input ref={this.name} type="text" className={this.state.nameClass} placeholder="Party Wear"/>
@@ -60,7 +59,7 @@ class AddCategoryPage extends React.Component {
                 <small>Description</small><br />
                 <input ref={this.description} type="text" className={this.state.descriptionClass} placeholder="Dresses and suits for parties"/>
                 </div>
-            </form>
+            </div>
             <br />
             <button href="#" className="btn btn-outline-primary btn-block" onClick={this.onAddCategoryBtnClick}>Add Category</button>
           </div>

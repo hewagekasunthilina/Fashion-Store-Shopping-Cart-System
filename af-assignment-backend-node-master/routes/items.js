@@ -37,10 +37,17 @@ router.get("/", function(req, res, next) {
     });
 });
 
+router.get("/by/:category", function(req, res, next) {
+    let category = req.params.category;
+    itemsCollection.find({ category: category }).toArray((err, items) => {
+        res.send({ body: items });
+    })
+})
+
 /* ADD new item */
 router.post("/", function(req, res, next) {
     let id = uuidv4();
-    let item = { _id: id, reviews: [], discount: 0.0 };
+    let item = { _id: id, reviews: [], discount: 0.0, ratings: {}, averageRating: 0 };
 
     Object.keys(req.body.item).forEach((key) => {
         item[key] = req.body.item[key];
@@ -70,6 +77,15 @@ router.put("/", function(req, res, next) {
     });
 });
 
+/* DELETE item */
+router.delete("/:id", function(req, res, next) {
+    let id = req.params.id;
+    itemsCollection.remove({ _id: id }, (error, result) => {
+        if (result) res.send({ successful: true });
+        else res.send({ successful: false });
+    })
+});
+
 /* GET total cost */
 router.post("/total", function(req, res, next) {
     let selectedItems = req.body;
@@ -96,10 +112,60 @@ router.post("/:id/review", function(req, res, next) {
     );
 });
 
+/* ADD a rating; Only one rating per user */
+router.post("/:id/ratings", function(req, res, next) {
+    let id = req.params.id;
+    let rating = req.body.rating;
+    let email = rating.email;
+    let ratingValue = rating.value;
+   
+    // To make sure that only one rating can be given by one user,
+    // we store rating values against the username/email.
+    // Also, since we are storing a hashmaps of 2 levels, we need to make sure,
+    // that no key has a dot (Emails have dots!).
+    email = email.replace('.', '_').replace('@', '_');
+    itemsCollection.findOne({ _id: id }, { ratings: 1 }, (error, result) => {
+        if (result) {
+            ratings = result.ratings ? result.ratings : {};
+            ratings[email] = ratingValue;
+
+            // Calculate average rating as well.
+            let totalRating = 0;
+            let totalNumberOfRatings = Object.keys(ratings).length;
+            Object.keys(ratings).forEach(email => totalRating += parseInt(ratings[email]));
+            let averageRating = parseInt(totalRating / totalNumberOfRatings);
+
+            itemsCollection.updateOne({ _id: id }, { $set: { ratings: ratings, averageRating: averageRating } },
+                (error, result) => {
+                    if (result) res.send({ successful: true });
+                    else res.send({ successful: false, body: error.errmsg });
+                }
+            );
+        }
+        else res.send({ successful: false, body: error.errmsg });
+    });
+});
+
+/* GET all ratings for a product */
+router.get("/:id/ratings", function(req, res, next) {
+    let id = req.params.id;
+    itemsCollection.findOne({ _id: id }, { ratings: 1 }, (error, result) => {
+        if (result.ratings) {
+            // Ratings is a hashmap of < email : rating >
+            let ratings = result.ratings;
+            let totalRating = 0;
+            let totalNumberOfRatings = Object.keys(ratings).length;
+
+            Object.keys(ratings).forEach(email => totalRating += parseInt(ratings[email]));
+            let averageRating = parseInt(totalRating / totalNumberOfRatings);
+            res.send({ successful: true, rating: averageRating });
+        } else res.send({ successful: false, body: error});
+    });
+});
+
 /* GET all reviews for a product */
 router.get("/:id/reviews", function(req, res, next) {
     let id = req.params.id;
-    console.log(id);
     itemsCollection.findOne({ _id: id }, { reviews: 1 }, (error, result) => {
         if (result) {
             // Showing timestamp in the UI is ugly. Instead showing # of days ago.
@@ -117,25 +183,5 @@ router.get("/:id/reviews", function(req, res, next) {
     });
 });
 
-/* ADD a category */
-router.post("/categories", function(req, res, next) {
-    let category = req.body.category;
-    category._id = category.name;
 
-    categoryCollection
-        .insertOne(category)
-        .then(result => res.send({ successful: true }))
-        .catch(error => res.send({ successful: false, body: error.errmsg }));
-});
-
-/* GET all categories */
-router.get("/categories", function(req, res, next) {
-    categoryCollection.find().toArray((err, items) => {
-        if (items) res.send({ successful: true, body: items });
-        else res.send({ successful: false, body: error.errmsg });
-    });
-});
-
-module.exports = router;
-module.exports = router;
 module.exports = router;

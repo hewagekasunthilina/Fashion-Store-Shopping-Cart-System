@@ -21,7 +21,7 @@ class AddReview extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <div>
           <div className="form-group row">
             <label for="exampleFormControlTextarea1">Add a Review</label>
             <textarea
@@ -31,7 +31,7 @@ class AddReview extends React.Component {
               ref={this.review}
             ></textarea>
           </div>
-        </form>
+        </div>
         <div className="row">
           <button
             href="#"
