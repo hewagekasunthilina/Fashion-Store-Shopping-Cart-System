@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1ff863-5b7a-4b02-9054-b1d72b1fd622" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/styles/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Carousel/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Pages/ItemsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-ui-react-master/src/components/Pages/ItemsPage.js" afterDir="false" />
     </list>
@@ -39,7 +43,9 @@
       <updated>1589994353649</updated>
       <workItem from="1589994355020" duration="405000" />
       <workItem from="1589994838125" duration="4000" />
-      <workItem from="1589995455642" duration="676000" />
+      <workItem from="1589995455642" duration="1049000" />
+      <workItem from="1590037886696" duration="1216000" />
+      <workItem from="1590081554415" duration="614000" />
     </task>
     <servers />
   </component>
@@ -47,10 +53,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1589995461297">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1590039358354">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1280.994@0.0.1536.834" timestamp="1589995461297" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1280.994@0.0.1536.834" timestamp="1590039358354" />
     <state width="1515" height="193" key="GridCell.Tab.0.bottom" timestamp="1589994764797">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
