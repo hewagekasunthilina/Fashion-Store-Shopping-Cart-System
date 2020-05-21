@@ -34,12 +34,12 @@ class ItemCard extends React.Component {
   render() {
     return (
       <div
-        className="card text-center"
+        className="card text-center card border-dark mb-3"
         style={{
-          width: "18rem",
-          maxHeight: "30rem",
+          width: "21.5rem",
+          maxHeight: "30.5rem",
           margin: "1rem",
-          padding: ".5rem",
+          padding: ".1rem",
         }}
       >
         <div
@@ -51,10 +51,10 @@ class ItemCard extends React.Component {
             className="card-img-top"
             alt={this.state.item.title}
             style={{
-              maxHeight: "10rem",
-              maxWidth: "10rem",
-              minHeight: "10rem",
-              minWidth: "10rem",
+              maxHeight: "14rem",
+              maxWidth: "13rem",
+              minHeight: "14rem",
+              minWidth: "13rem",
             }}
           />
         </div>
