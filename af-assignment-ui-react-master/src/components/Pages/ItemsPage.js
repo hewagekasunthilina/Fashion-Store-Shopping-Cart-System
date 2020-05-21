@@ -2,6 +2,8 @@ import React from "react";
 import axios from "../../api/api";
 import ItemCard from "../Items/ItemCard";
 import Carousel from "../Carousel/Carousel";
+import Footer from "../Footer/Footer";
+import "../styles/Footer.css";
 
 class ItemsPage extends React.Component {
     constructor(props) {
@@ -81,6 +83,13 @@ class ItemsPage extends React.Component {
 
     render() {
         return (
+<<<<<<< HEAD
+=======
+<div>
+  <Carousel>
+
+  </Carousel>
+>>>>>>> 3ed38d9feed5b173634321cb09f71f8bd7100277
                 <div>
                     <br/>
                     <Carousel></Carousel>
@@ -95,7 +104,10 @@ class ItemsPage extends React.Component {
                     </div>
                     <hr/>
 
+<<<<<<< HEAD
                   <div className="container">
+=======
+>>>>>>> 3ed38d9feed5b173634321cb09f71f8bd7100277
                     <div className="row align-items-center">
                         {this.state.items.map((item, index) => {
                             return (
@@ -109,9 +121,20 @@ class ItemsPage extends React.Component {
                         })}
                     </div>
                 </div>
+<<<<<<< HEAD
             </div>
         );
     }
 }
+=======
+    <Footer>
+
+    </Footer>
+                </div>
+
+                );
+                }
+                }
+>>>>>>> 3ed38d9feed5b173634321cb09f71f8bd7100277
 
 export default ItemsPage;
