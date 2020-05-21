@@ -20,16 +20,16 @@ class Footer extends Component {
                         </div>
                         <ul>
                             <a href="">
-                                <li>Home</li>
+                                <li>Items</li>
                             </a>
                             <a href="">
-                                <li>Home</li>
+                                <li>New Arrivals</li>
                             </a>
                             <a href="">
-                                <li>Home</li>
+                                <li>Sales</li>
                             </a>
                             <a href="">
-                                <li>Home</li>
+                                <li>Summer Designs</li>
                             </a>
                         </ul>
                     </div>
@@ -40,16 +40,16 @@ class Footer extends Component {
                         </div>
                         <ul>
                             <a href="">
-                                <li>Home</li>
+                                <li>Party Wear</li>
                             </a>
                             <a href="">
-                                <li>Home</li>
+                                <li>Shorts</li>
                             </a>
                             <a href="">
-                                <li>Home</li>
+                                <li>T-Shirts</li>
                             </a>
                             <a href="">
-                                <li>Home</li>
+                                <li>Sarees</li>
                             </a>
                         </ul>
                     </div>

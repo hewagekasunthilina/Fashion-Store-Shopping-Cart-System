@@ -43,13 +43,13 @@ class NavNotLogged extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span className="nav-link" href="#" onClick={this.onItemsNavClick}>
-                  Items
+                <span className="nav-link" href="#" style={{fontWeight: "600", color:"#000"}} onClick={this.onItemsNavClick}>
+                  ITEMS
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#" onClick={this.onLoginRegisterNavClick}>
-                  Login / Register
+                <span className="nav-link" href="#" style={{fontWeight: "600", color:"#000"}} onClick={this.onLoginRegisterNavClick}>
+                  LOGIN / REGISTER
                 </span>
               </li>
             </ul>
