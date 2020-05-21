@@ -30,10 +30,10 @@ class NavStoreManager extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#EBEBEB" }}>
+      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#383D63" }}>
         <div className="container-fluid">
           <span className="navbar-brand" href="#">
-            <h2>OFAL Fashions</h2>
+            OFAL Fashions
           </span>
           <span
             className="navbar-toggler"
