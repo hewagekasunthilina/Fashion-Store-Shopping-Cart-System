@@ -95,45 +95,45 @@ class LoginRegisterCustomer extends React.Component {
   render() {
     return (
       <div className=" justify-content-center row col-md-12" style={{ marginTop: "5rem" }}>
-        <div className={this.state.regCardClass} style={{ margin: ".5rem", padding: ".5rem"}}>
+        <div className={this.state.regCardClass} style={{ margin: ".5rem", padding: ".5rem",backgroundColor: "#343A40"}}>
             <div className="card-body">
-              <h5 className="card-title">Register</h5>
+                <div className="card-header"><h3 style={{textAlign: "center", color:"#fff"}}>Register</h3></div>
               <div>
                 <div className="form-group">
-                  <small>Name</small><br />
+                  <small style={{color:"#fff"}}>Name</small><br />
                   <input ref={this.regName} className={this.state.regNameInputClass} type="text" placeholder="Gayan Perera" />
                 </div>
                 <div className="form-group">
-                  <small>Email</small><br />
+                  <small style={{color:"#fff"}}>Email</small><br />
                   <input ref={this.regEmail} className={this.state.regEmailInputClass} type="text" placeholder="gaya.perera@gmail.com"/>
                   </div>
                 <div className="form-group">
-                  <small>Password</small><br />
+                  <small style={{color:"#fff"}}>Password</small><br />
                   <input ref={this.regPassword} className={this.state.regPasswordInputClass} type="password" placeholder="shush!"/>
                 </div>
               </div>
               <br />
-              <button href="#" className="btn btn-secondary btn-block align-self-end" onClick={this.onRegBtnClick}>Register</button>
+              <button href="#" className="btn btn-primary btn-block" onClick={this.onRegBtnClick}>Register</button>
             </div>
           </div>
 
           <div className="col-md-1" style={{ margin: ".5rem", padding: ".5rem"}}></div>
 
-          <div className={this.state.loginCardClass} style={{ margin: ".5rem", padding: ".5rem"}}>
+          <div className={this.state.loginCardClass} style={{ margin: ".5rem", padding: ".5rem",backgroundColor: "#343A40"}}>
             <div className="card-body">
-              <h5 className="card-title">Login</h5>
+                <div className="card-header"><h3 style={{textAlign: "center", color:"#fff"}}>Login</h3></div>
               <div>
                 <div className="form-group">
-                  <small>Email</small><br />
+                  <small style={{color:"#fff"}}>Email</small><br />
                   <input ref={this.loginEmail} className={this.state.loginEmailInputClass} type="text" placeholder="gaya.perera@gmail.com"/>
                   </div>
                 <div className="form-group">
-                  <small>Password</small><br />
+                  <small style={{color:"#fff"}}>Password</small><br />
                   <input ref={this.loginPassword} className={this.state.loginPasswordInputClass} type="password" placeholder="shush!"/>
                 </div>
               </div>
               <br />
-              <button href="#" className="btn btn-primary btn-block" onClick={this.onLoginBtnClick}>Login</button>
+              <button href="#" className="btn btn-primary btn-block" style={{marginTop:"5rem"}} onClick={this.onLoginBtnClick}>Login</button>
             </div>
           </div>
        </div>
