@@ -101,11 +101,12 @@ class EditItem extends React.Component {
         className="align-items-center justify-content-center row col-md-12"
         style={{ margin: ".5rem", padding: ".5rem" }}
       >
+        <div className="card text-white bg-dark mb-3">
         <div className={this.state.cardClass}>
           <div className="card-body">
             <div class="form-inline">
-              <div class="form-group" style={{ "margin-right": "1rem" }}>
-                <label style={{ "margin-right": ".5rem" }}>Name</label>
+              <div class="form-group" style={{ "margin-right": ".1rem" }}>
+                <label style={{ "margin-right": ".1rem" }}>Name</label>
                 <input
                   id="name"
                   type="text"
@@ -148,21 +149,7 @@ class EditItem extends React.Component {
                   onChange={this.onFieldChange}
                 />
               </div>
-              <div class="form-group" style={{ "margin-right": "1rem" }}>
-                <button
-                  className="btn btn-outline-primary btn-sm"
-                  onClick={this.onUpdateBtnClick}
-                >
-                  Update Item
-                </button>
-                <button
-                  className="btn btn-outline-danger btn-sm"
-                  onClick={this.onDeleteBtnClick}
-                  style={{ marginLeft: "1rem" }}
-                >
-                  Delete Item
-                </button>
-              </div>
+
             </div>
 
             <br />
@@ -178,19 +165,38 @@ class EditItem extends React.Component {
                   onChange={this.onFieldChange}
                 />
               </div>
+              <br />
+              <div className="form-group" style={{"margin-right": "1rem"}}>
+                <button
+                    className="btn btn-success btn-sm"
+                    onClick={this.onUpdateBtnClick}
+                    style={{marginLeft: "4.5rem"}}
+                >
+                  Update Item
+                </button>
+                <button
+                    className="btn btn-danger btn-sm"
+                    onClick={this.onDeleteBtnClick}
+                    style={{marginLeft: "1rem"}}
+                >
+                  Delete Item
+                </button>
+              </div>
             </div>
-          
+
           </div>
           <div className="card-body align-items-right justify-content-right">
             <div class="form-check" style={{ float: "right" }}>
               <input class="form-check-input" type="checkbox" value="" id="delete" onChange={this.onFieldChange}/>
               <small class="form-check-label" for="defaultCheck1">
-                Confirm Deletion
+                <h7 style={{color: "#000000"}}>Confirm Deletion</h7>
               </small>
             </div>
           </div>
         </div>
       </div>
+      </div>
+
     );
   }
 }

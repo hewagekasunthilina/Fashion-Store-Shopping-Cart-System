@@ -26,7 +26,7 @@ class NavNotLogged extends React.Component {
       <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#EBEBEB" }}>
         <div className="container-fluid">
           <span className="navbar-brand" href="#">
-            Shopperrrr!
+            OFAL Fashions
           </span>
           <span
             className="navbar-toggler"

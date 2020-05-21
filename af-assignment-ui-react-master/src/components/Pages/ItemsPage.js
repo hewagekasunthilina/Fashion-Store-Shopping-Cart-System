@@ -83,13 +83,19 @@ class ItemsPage extends React.Component {
 
     render() {
         return (
+<<<<<<< HEAD
+=======
 <div>
   <Carousel>
 
   </Carousel>
+>>>>>>> 3ed38d9feed5b173634321cb09f71f8bd7100277
                 <div>
                     <br/>
-                    <div className="col-md-2">
+                    <Carousel></Carousel>
+                    <br/>
+                    <br/>
+                    <div className="col-md-3">
                         Categories
                         <select ref={this.category} onChange={this.onCategoryChange}
                                 className="form-control">{this.state.categories.map((category, index) => {
@@ -98,6 +104,10 @@ class ItemsPage extends React.Component {
                     </div>
                     <hr/>
 
+<<<<<<< HEAD
+                  <div className="container">
+=======
+>>>>>>> 3ed38d9feed5b173634321cb09f71f8bd7100277
                     <div className="row align-items-center">
                         {this.state.items.map((item, index) => {
                             return (
@@ -111,6 +121,12 @@ class ItemsPage extends React.Component {
                         })}
                     </div>
                 </div>
+<<<<<<< HEAD
+            </div>
+        );
+    }
+}
+=======
     <Footer>
 
     </Footer>
@@ -119,5 +135,6 @@ class ItemsPage extends React.Component {
                 );
                 }
                 }
+>>>>>>> 3ed38d9feed5b173634321cb09f71f8bd7100277
 
-                export default ItemsPage;
+export default ItemsPage;
