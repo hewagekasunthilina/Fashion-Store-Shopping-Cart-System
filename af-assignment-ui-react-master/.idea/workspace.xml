@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5f07cb5-75fd-4b13-b051-7eba302168d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../af-assignment-backend-node-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../af-assignment-backend-node-master/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Items/EditItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Items/EditItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Items/ItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Items/ItemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/AddItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/AddItemPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/ItemsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ItemsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/NavAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/NavCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/NavNotLogged.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavNotLogged.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/NavStoreManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavStoreManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +38,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -49,6 +60,9 @@
       <workItem from="1589994295803" duration="25000" />
       <workItem from="1589994366999" duration="384000" />
       <workItem from="1589995470024" duration="1687000" />
+      <workItem from="1590050825998" duration="58000" />
+      <workItem from="1590050884980" duration="3259000" />
+      <workItem from="1590064687179" duration="13566000" />
     </task>
     <servers />
   </component>
@@ -56,6 +70,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="27" key="#Plugins" timestamp="1590064649274">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#Plugins/0.0.1366.738@0.0.1366.738" timestamp="1590064649274" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1590050879138">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1590050879138" />
     <state width="1515" height="193" key="GridCell.Tab.0.bottom" timestamp="1589994753058">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

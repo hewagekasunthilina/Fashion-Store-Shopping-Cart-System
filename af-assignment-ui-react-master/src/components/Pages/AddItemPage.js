@@ -90,10 +90,10 @@ class AddItemPage extends React.Component {
   render() {
     return (
       <div className="align-items-center justify-content-center row" style={{ margin: ".5rem", padding: ".5rem"}}>
+        <div className="card text-white bg-dark mb-3" style={{width: "32rem"}}>
         <div className={this.formClass}>
-          <div className="card-body">
-            <h5 className="card-title">Add an Item</h5>
-            <div>
+          <div className="card-header"><h3 style={{textAlign: "center"}}>Add an Item</h3></div>
+          <div className="card-body" style={{marginLeft: "10%", marginRight: "10%", marginTop: "2%", marginBottom: "3%"}}>
               <div className="form-group">
                 <small>Name</small><br />
                 <input ref={this.name} type="text" className={this.state.nameClass}  placeholder="V-Collar T Shirt"/>
@@ -114,11 +114,12 @@ class AddItemPage extends React.Component {
                 <small>Description</small><br />
                 <input ref={this.body} type="text" className={this.state.descriptionClass}  placeholder="Available in M, L, XL, XXL"/>
               </div>
-            </div>
-            <br />
-            <button href="#" className="btn btn-outline-primary btn-block" onClick={this.onAddItemBtnClick}>Add Item</button>
+
+            <br/>
+            <button href="#" className="btn btn-primary btn-block" onClick={this.onAddItemBtnClick}>Add Item</button>
           </div>
         </div>
+      </div>
       </div>
     );
   }
