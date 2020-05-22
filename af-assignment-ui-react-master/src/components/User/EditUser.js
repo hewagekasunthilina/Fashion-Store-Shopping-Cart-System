@@ -85,8 +85,8 @@ class EditUser extends React.Component {
                 className="align-items-center justify-content-center row col-md-12"
                 style={{margin: ".5rem", padding: ".5rem"}}
             >
-                <div className="card">
-                    <div className="card-body">
+                <div className="card"  style={{ backgroundColor: "#454d54" ,  color:"#fff"}}>
+                    <div className="card-body" >
                         <div class="form-inline">
                             <div class="form-group" style={{"margin-right": "1rem"}}>
                                 <label style={{"margin-right": ".5rem"}}>Email</label>
