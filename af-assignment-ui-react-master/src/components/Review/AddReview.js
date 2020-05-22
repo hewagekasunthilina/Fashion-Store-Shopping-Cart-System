@@ -35,7 +35,7 @@ class AddReview extends React.Component {
         <div className="row">
           <button
             href="#"
-            className="btn btn-outline-warning btn-sm float-right"
+            className="btn btn-outline-danger btn-sm float-right"
             onClick={this.onAddReviewBtnClick}
           >
             Add

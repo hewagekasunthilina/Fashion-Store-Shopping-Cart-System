@@ -63,11 +63,11 @@ class Summary extends React.Component {
                 <label>{this.state.totalPrice}</label>
               </div>
               <div className="form-group">
-                <small>Name on Credit Card</small><br />
+                <small>Name on Card</small><br />
                 <input ref={this.name} type="text" className="form-control" placeholder="Hashini Silva"/>
               </div>
               <div className="form-group">
-                <small>Credit Card Number</small><br />
+                <small>Card Number</small><br />
                 <input ref={this.cardNumber} type="text" className="form-control" placeholder="42267896453"/>
               </div>
               <div className="form-group">

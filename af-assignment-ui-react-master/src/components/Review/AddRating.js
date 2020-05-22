@@ -29,7 +29,7 @@ class AddRating extends React.Component {
     return (
       <div>
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">Add a Rating</label>
+            <label for="exampleFormControlTextarea1">Rate the Item</label>
             <br />
             <div><StarRatings
               rating={this.state.rating}
@@ -45,7 +45,7 @@ class AddRating extends React.Component {
         <div className="row">
           <button
             href="#"
-            className="btn btn-outline-warning btn-sm float-right"
+            className="btn btn-outline-danger btn-sm float-right"
             onClick={this.onAddSubmitBtnClick}
           >
             Submit Rating
