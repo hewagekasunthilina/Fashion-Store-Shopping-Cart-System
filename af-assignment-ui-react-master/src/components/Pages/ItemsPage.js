@@ -86,12 +86,9 @@ class ItemsPage extends React.Component {
 
     render() {
         return (
-
               <div>
-                    <br/>
-                    <Carousel></Carousel>
-                    <br/>
-                    <br/>
+
+<Carousel></Carousel>
                     <div className="col-md-3" style={{display: "contents"}}><span style={{marginLeft: "47.5%", fontWeight: "600"}}>
                         Categories</span>
                         <select ref={this.category} onChange={this.onCategoryChange}
@@ -119,7 +116,6 @@ class ItemsPage extends React.Component {
 
                 <Footer></Footer>
               </div>
-
             );
         }
     }
