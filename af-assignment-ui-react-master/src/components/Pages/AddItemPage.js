@@ -4,8 +4,8 @@ import axios from "../../api/api";
 class AddItemPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-		categories: [], 
+    this.state = {
+		categories: [],
 		imageId: "sample.jpg",
 		nameClass: "form-control",
 		priceClass: "form-control",
@@ -41,7 +41,7 @@ class AddItemPage extends React.Component {
   onAddItemBtnClick() {
 
 	let validForm = this.validateAddItemForm();
-	
+
 	if (validForm) {
 		let title = this.name.current.value;
 		let imageFilename = title.replace(' ', '') + new Date().getTime() + '.jpg';
@@ -50,7 +50,7 @@ class AddItemPage extends React.Component {
 		// Send the info first as JSON and then the actual image as a multipart upload.
 		axios.post('/items', { item })
 		.then(res => {
-		  if (res.data.successful) { 
+		  if (res.data.successful) {
 			  this.uploadImage(imageFilename);
 			  alert(`Successfully added ${item.title}`);
 		  }
@@ -59,32 +59,32 @@ class AddItemPage extends React.Component {
 		.catch(error => alert(`Unable to add ${item.title} because ${error}`));
 	}
   }
-	
+
   uploadImage(imageFilename) {
 	  let imageFile = this.image.current.files[0];
 	  console.log(this.image.current.files);
 	  let headers = { 'Content-Type': 'multipart/form-data' };
 	  let payload = new FormData();
 	  payload.append("file", imageFile, imageFilename);	// Rename so that we have a reference to the image in Item object in the DB.
-	  
+
 	  axios.post("/items/images/", payload, { headers: headers }).then().catch(error => console.log(error));
   }
-	
+
   validateAddItemForm() {
 	  let title = this.name.current.value;
 	  let price = this.price.current.value;
 	  let body = this.body.current.value;
 	  let imageUploadLength = this.image.current.files.length;
 	  let formInvalid = (title === "" || price === "" || body === "" || imageUploadLength === 0);
-	  
+
 	  this.setState({ nameClass: title === "" ? "is-invalid form-control" : "form-control" });
 	  this.setState({ priceClass: price === "" ? "is-invalid form-control" : "form-control" });
 	  this.setState({ imageClass: imageUploadLength === 0 ? "is-invalid form-control" : "form-control" });
 	  this.setState({ descriptionClass: body === "" ? "is-invalid form-control" : "form-control" });
 	  this.setState({ formClass: formInvalid ? "card col-md-4 border-danger" : "card col-md-4" })
-	  
+
 	  return !formInvalid;
-	  
+
   }
 
   render() {
