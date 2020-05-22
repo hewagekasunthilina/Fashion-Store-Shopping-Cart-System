@@ -53,7 +53,7 @@ class Summary extends React.Component {
 
   render() {
     return (
-      <div className="align-items-center" style={{ margin: ".5rem", padding: ".5rem"}}>
+      <div className="align-items-center" style={{ margin: ".5rem", padding: ".5rem",backgroundColor: "#343A40"}}>
         <div className={this.state.cardClasses}>
           <div className="card-body">
             <h5 className="card-title">Payment</h5>
@@ -64,11 +64,11 @@ class Summary extends React.Component {
               </div>
               <div className="form-group">
                 <small>Name on Credit Card</small><br />
-                <input ref={this.name} type="text" className="form-control" placeholder="Gayan Perera"/>
+                <input ref={this.name} type="text" className="form-control" placeholder="Hashini Silva"/>
               </div>
               <div className="form-group">
                 <small>Credit Card Number</small><br />
-                <input ref={this.cardNumber} type="text" className="form-control" placeholder="471123565456"/>
+                <input ref={this.cardNumber} type="text" className="form-control" placeholder="42267896453"/>
               </div>
               <div className="form-group">
                 <small>Expiry Date</small><br />
@@ -85,7 +85,7 @@ class Summary extends React.Component {
               </div>
               <div className="form-group">
                 <small>Address</small><br />
-                <input ref={this.address} type="text" className="form-control" rows="3" placeholder="08, My Street, Colombo" />
+                <input ref={this.address} type="text" className="form-control" rows="3" placeholder="02, Park Street, Colombo 08" />
               </div>
               <div className="form-group">
                 <small>Card Type</small><br />

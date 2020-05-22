@@ -8,9 +8,9 @@ class Footer extends Component {
                     <div className="footer-items">
                         <h1>OFAL Fashions</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Adipisci aliquid amet, animi consectetur corporis culpa, cupiditate eaque id,
-                            illum itaque nihil non quisquam quod saepe suscipit temporibus vel velit voluptatem?
+                            Sri Lanka’s biggest fashion chain offers a wide range of clothes and accessories
+                            for Men, Women and Kids. The retail store houses a range of Homeware and Lifestyle
+                            products to compliment a comprehensive family shopping experience for all our customers.
                         </p>
                     </div>
 
