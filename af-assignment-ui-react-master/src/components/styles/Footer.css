@@ -4,14 +4,14 @@
     font-family: sans-serif;
 }
 
-.body-content{
-    width: 100%;
-    padding: 20px;
-    text-align: justify;
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 40px;
-}
+/*.body-content{*/
+/*    width: 100%;*/
+/*    padding: 20px;*/
+/*    text-align: justify;*/
+/*    box-sizing: border-box;*/
+/*    font-size: 18px;*/
+/*    line-height: 40px;*/
+/*}*/
 
 .footer{
     width: 100%;
@@ -129,7 +129,7 @@ li i{
 
 @media screen and(max-width: 600px){
     .footer-items{
-        width: 100%;
+        width: 50%;
     }
 }
 
