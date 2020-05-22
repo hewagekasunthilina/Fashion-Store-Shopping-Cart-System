@@ -87,13 +87,13 @@ class EditCategory extends React.Component {
               </div>
               <div class="form-group" style={{ "margin-right": "1rem" }}>
                 <button
-                  className="btn btn-outline-primary btn-sm"
+                  className="btn btn-success btn-sm"
                   onClick={this.onUpdateBtnClick}
                 >
                   Update Item
                 </button>
                 <button
-                  className="btn btn-outline-danger btn-sm"
+                  className="btn btn-danger btn-sm"
                   onClick={this.onDeleteBtnClick}
                   style={{ marginLeft: "1rem" }}
                 >

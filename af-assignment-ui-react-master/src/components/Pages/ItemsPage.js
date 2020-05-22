@@ -89,8 +89,8 @@ class ItemsPage extends React.Component {
                     <Carousel></Carousel>
                     <br/>
                     <br/>
-                    <div className="col-md-3">
-                        Categories
+                    <div className="col-md-3" style={{display: "contents"}}><span style={{marginLeft: "47.5%", fontWeight: "600"}}>
+                        Categories</span>
                         <select ref={this.category} onChange={this.onCategoryChange}
                                 className="form-control">{this.state.categories.map((category, index) => {
                             return (<option>{category.name}</option>)

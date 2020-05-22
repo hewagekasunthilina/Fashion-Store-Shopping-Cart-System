@@ -56,33 +56,34 @@ class AddManagerUser extends React.Component {
 
   render() {
     return (
-      <div className="align-items-center justify-content-center row" style={{ margin: ".5rem", padding: ".5rem"}}>
-        <div className={this.state.cardClass}>
+      <div className="align-items-center justify-content-center row " style={{ margin: ".5rem", padding: ".5rem", width: "80rem"}}>
+        <div className={this.state.cardClass} style={{ backgroundColor: "#343A40"}}>
           <div className="card-body">
-            <h5 className="card-title">Add Store Manager</h5>
-            <div>
+              <div className="card-header"><h3 style={{textAlign: "center", color:"#fff"}}>Add New Store Manager</h3></div>
+                <div>
               <div className="form-group">
-                <small>Name</small><br />
-                <input ref={this.name} type="text" className={this.state.nameClass} placeholder="Gayan Perera"/>
+                <small style={{color:"#fff"}} >Name</small><br />
+                <input ref={this.name} type="text" className={this.state.nameClass}  placeholder="Gayan Perera"/>
               </div>
               <div className="form-group">
-                <small>Email</small><br />
+                <small style={{color:"#fff"}} >Email</small><br />
                 <input ref={this.email} type="text" className={this.state.emailClass} placeholder="gaya.perera@gmail.com"/>
                 </div>
               <div className="form-group">
-                <small>Password</small><br />
+                <small style={{color:"#fff"}} >Password</small><br />
                 <input ref={this.password} type="password" className={this.state.passwordClass} placeholder="shush!"/>
               </div>
               <div className="form-group">
-                <small>User Type</small><br />
+                <small style={{color:"#fff"}} >User Type</small><br />
                   <select ref={this.role} className="form-control">{ this.state.roles.map((role, index) => { return(<option>{role}</option>) })} </select>
               </div>
             </div>
             <br />
-            <button href="#" className="btn btn-outline-primary btn-block" onClick={this.onAddUserBtnClick}>Add User</button>
+            <button href="#" className="btn btn-primary btn-block" onClick={this.onAddUserBtnClick}>Add User</button>
           </div>
         </div>
-      </div>
+          </div>
+
     );
   }
 }
