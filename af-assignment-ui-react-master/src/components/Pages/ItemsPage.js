@@ -17,9 +17,9 @@ class ItemsPage extends React.Component {
         this.fetchCategories = this.fetchCategories.bind(this);
         this.fetchItemsByCategory = this.fetchItemsByCategory.bind(this);
         this.onCategoryChange = this.onCategoryChange.bind(this);
-       // this.addItemToCart = this.addItemToCart.bind(this);
+        // this.addItemToCart = this.addItemToCart.bind(this);
         // this.fetchItems = this.fetchItems.bind(this);
-       // this.viewItem = this.viewItem.bind(this);
+        // this.viewItem = this.viewItem.bind(this);
     }
 
     componentDidMount() {
@@ -86,20 +86,21 @@ class ItemsPage extends React.Component {
 
     render() {
         return (
-              <div>
+            <div>
 
-<Carousel></Carousel>
-                    <div className="col-md-3" style={{display: "contents"}}><span style={{marginLeft: "47.5%", fontWeight: "600"}}>
-                        Categories</span>
-                        <select ref={this.category} onChange={this.onCategoryChange}
-                                className="form-control">{this.state.categories.map((category, index) => {
-                            return (<option>{category.name}</option>)
-                        })} </select>
-                    </div>
-                    <hr/>
+                <Carousel></Carousel>
+                <div className="col-md-3" style={{display: "contents"}}><span
+                    style={{marginLeft: "45.5%", fontWeight: "600"}}>
+                        SHOP BY CATEGORY</span>
+                    <select ref={this.category} onChange={this.onCategoryChange}
+                            className="form-control">{this.state.categories.map((category, index) => {
+                        return (<option>{category.name}</option>)
+                    })} </select>
+                </div>
+                <hr/>
 
 
-                  <div className="container" style={{maxWidth: "1500px"}}>
+                <div className="container" style={{maxWidth: "1500px", marginLeft: "-8px"}}>
                     <div className="row align-items-center" style={{marginRight: "-30px"}}>
                         {this.state.items.map((item, index) => {
                             return (
@@ -115,10 +116,10 @@ class ItemsPage extends React.Component {
                 </div>
 
                 <Footer></Footer>
-              </div>
-            );
-        }
+            </div>
+        );
     }
+}
 
 
 export default ItemsPage;

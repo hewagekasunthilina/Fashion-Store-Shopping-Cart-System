@@ -4,7 +4,7 @@ class Carousel extends Component{
     render() {
         return(
 
-            <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+            <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel" style={{marginBottom: "2rem", marginTop:"1rem"}}>
                 {/*<ol className="carousel-indicators">*/}
                 {/*    <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>*/}
                 {/*    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>*/}
