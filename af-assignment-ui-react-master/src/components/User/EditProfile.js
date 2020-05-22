@@ -53,7 +53,7 @@ class EditProfile extends React.Component {
 	render() {
 		return (
 			<div className="align-items-center justify-content-center row" style={{ margin: ".5rem", padding: ".5rem"}}>
-        <div className={this.state.cardClass}>
+        <div className={this.state.cardClass} style={{backgroundColor: "#343A40" , color:"#fff"}}>
           <div className="card-body">
             <h5 className="card-title">Update Profile</h5>
             <div>
@@ -71,7 +71,7 @@ class EditProfile extends React.Component {
               </div>
             </div>
             <br />
-            <button href="#" className="btn btn-outline-success btn-block" onClick={this.onSaveBtnClick}>Save</button>
+            <button href="#" className="btn btn-outline-success btn-block" onClick={this.onSaveBtnClick}>Edit</button>
           </div>
         </div>
       </div>
