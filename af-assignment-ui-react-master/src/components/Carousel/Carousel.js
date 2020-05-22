@@ -11,14 +11,14 @@ class Carousel extends Component{
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Fbug_Web_compressed.jpg?alt=media&token=0a7785e8-5bff-4aaa-9450-1dcfefa82ea1" alt="First slide"/>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Web-Banner-5.png?alt=media&token=0dc2204e-2a96-4c7a-b717-34ddba27c4d8" className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Web-Banner-5.png?alt=media&token=0dc2204e-2a96-4c7a-b717-34ddba27c4d8" alt="Second slide"/>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Fbug_Web_compressed.jpg?alt=media&token=0a7785e8-5bff-4aaa-9450-1dcfefa82ea1" className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Fbug_Web_compressed.jpg?alt=media&token=0a7785e8-5bff-4aaa-9450-1dcfefa82ea1" alt="Third slide"/>
-                    </div>
+                    {/*<div className="carousel-item">*/}
+                    {/*    <img src="https://www.themechoice.com/images/demo_full_width_slider/nitro-5827120160721130921.jpg" className="d-block w-100" alt="..."/>*/}
+                    {/*</div>*/}
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

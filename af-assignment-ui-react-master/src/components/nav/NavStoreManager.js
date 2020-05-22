@@ -21,6 +21,7 @@ class NavStoreManager extends React.Component {
       case "items": this.props.goToPage("ItemsPage"); break;
       case "add-item": this.props.goToPage("AddItemPage"); break;
       case "edit-items": this.props.goToPage("EditItemsPage"); break;
+      case "wishlist": this.props.goToPage("WishlistPage"); break;
       case "cart": this.props.goToPage("ShoppingCartPage"); break;
       case "name": this.props.goToPage("Profile"); break;
       case "logout": this.props.logout(); break;
@@ -29,10 +30,10 @@ class NavStoreManager extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#EBEBEB" }}>
+      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#83809E" }}>
         <div className="container-fluid">
-          <span className="navbar-brand" href="#">
-            Shopperrrr!
+          <span className="navbar-brand" href="#" style={{color: "#900C3F", fontSize: "2rem", marginRight: "5%"}}>
+            OFAL Fashions
           </span>
           <span
             className="navbar-toggler"
@@ -61,6 +62,11 @@ class NavStoreManager extends React.Component {
               <li className="nav-item">
                 <span id="edit-items" className="nav-link" href="#" onClick={this.onNavItemClick}>
                   Edit Items
+                </span>
+              </li>
+              <li className="nav-item active">
+                <span className="nav-link" href="#" id="wishlist" onClick={this.onNavItemClick}>
+                  Wish list
                 </span>
               </li>
             </ul>

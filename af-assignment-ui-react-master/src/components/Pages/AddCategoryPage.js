@@ -47,21 +47,22 @@ class AddCategoryPage extends React.Component {
   render() {
     return (
       <div className="align-items-center justify-content-center row" style={{ margin: ".5rem", padding: ".5rem"}}>
-        <div className={this.state.cardClass}>
+        <div className={this.state.cardClass} style={{ backgroundColor: "#343A40"}}>
           <div className="card-body">
-            <h5 className="card-title">Add Category</h5>
-            <div>
+              <div className="card-header"><h3 style={{textAlign: "center", color:"#fff"}}>Add New Category</h3></div>
+
+              <div>
               <div className="form-group">
-                <small>Name</small><br />
+                <small style={{color:"#fff"}}>Name</small><br />
                 <input ref={this.name} type="text" className={this.state.nameClass} placeholder="Party Wear"/>
               </div>
               <div className="form-group">
-                <small>Description</small><br />
+                <small style={{color:"#fff"}}>Description</small><br />
                 <input ref={this.description} type="text" className={this.state.descriptionClass} placeholder="Dresses and suits for parties"/>
                 </div>
             </div>
             <br />
-            <button href="#" className="btn btn-outline-primary btn-block" onClick={this.onAddCategoryBtnClick}>Add Category</button>
+            <button href="#" className="btn btn-primary btn-block " onClick={this.onAddCategoryBtnClick}>Add Category</button>
           </div>
         </div>
       </div>

@@ -2,6 +2,8 @@ import React from "react";
 import axios from "../../api/api";
 import ItemCard from "../Items/ItemCard";
 import Carousel from "../Carousel/Carousel";
+import Footer from "../Footer/Footer";
+import "../styles/Footer.css";
 
 class ItemsPage extends React.Component {
     constructor(props) {
@@ -82,11 +84,13 @@ class ItemsPage extends React.Component {
     render() {
         return (
 
-
-                <div>
+              <div>
                     <br/>
-                    <div className="col-md-2">
-                        Categories
+                    <Carousel></Carousel>
+                    <br/>
+                    <br/>
+                    <div className="col-md-3" style={{display: "contents"}}><span style={{marginLeft: "47.5%", fontWeight: "600"}}>
+                        Categories</span>
                         <select ref={this.category} onChange={this.onCategoryChange}
                                 className="form-control">{this.state.categories.map((category, index) => {
                             return (<option>{category.name}</option>)
@@ -94,10 +98,8 @@ class ItemsPage extends React.Component {
                     </div>
                     <hr/>
 
-                  <div className="container">
-                    <Carousel>
 
-                    </Carousel>
+                  <div className="container">
                     <div className="row align-items-center">
                         {this.state.items.map((item, index) => {
                             return (
@@ -111,9 +113,13 @@ class ItemsPage extends React.Component {
                         })}
                     </div>
                 </div>
-            </div>
-                );
-                }
-                }
 
-                export default ItemsPage;
+                <Footer></Footer>
+              </div>
+
+            );
+        }
+    }
+
+
+export default ItemsPage;
