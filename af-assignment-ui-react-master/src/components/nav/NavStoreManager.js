@@ -30,9 +30,9 @@ class NavStoreManager extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#83809E" }}>
+      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#605D78" }}>
         <div className="container-fluid">
-          <span className="navbar-brand" href="#" style={{color: "#900C3F", fontSize: "2rem", marginRight: "5%"}}>
+          <span className="navbar-brand" href="#" style={{color: "#FFD9D9", fontSize: "2rem", marginRight: "5%", fontFamily: "Lucida Sans Unicode", fontWeight: "bold", fontStyle: "oblique"}}>
             OFAL Fashions
           </span>
           <span
@@ -50,22 +50,22 @@ class NavStoreManager extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span id="items" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="items" className="nav-link" href="#" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Items
                 </span>
               </li>
               <li className="nav-item">
-                <span id="add-item" className="nav-link" href="#" onClick={this.onNavItemClick}>
-                  Add Item
+                <span id="add-item" className="nav-link" href="#" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
+                  Add Items
                 </span>
               </li>
               <li className="nav-item">
-                <span id="edit-items" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="edit-items" className="nav-link" href="#" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Edit Items
                 </span>
               </li>
               <li className="nav-item active">
-                <span className="nav-link" href="#" id="wishlist" onClick={this.onNavItemClick}>
+                <span className="nav-link" href="#" id="wishlist" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Wish list
                 </span>
               </li>
