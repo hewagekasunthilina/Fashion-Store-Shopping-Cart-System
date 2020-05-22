@@ -48,12 +48,12 @@ class NavCustomer extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span className="nav-link" href="#" id="items" onClick={this.onNavItemClick}>
+                <span className="nav-link" href="#" id="items" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Items
                 </span>
               </li>
               <li className="nav-item active">
-                <span className="nav-link" href="#" id="wishlist" onClick={this.onNavItemClick}>
+                <span className="nav-link" href="#" id="wishlist" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Wishlist
                 </span>
               </li>

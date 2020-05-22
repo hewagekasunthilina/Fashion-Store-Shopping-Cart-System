@@ -51,27 +51,27 @@ class NavAdmin extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span id="items" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="items" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Items
                 </span>
               </li>
               <li className="nav-item">
-                <span id="add-user" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="add-user" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Add Management User
                 </span>
               </li>
               <li className="nav-item">
-                <span id="edit-users" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="edit-users" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Edit Management Users
                 </span>
               </li>
               <li className="nav-item">
-                <span id="add-category" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="add-category" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Add Category
                 </span>
               </li>
               <li className="nav-item">
-                <span id="edit-categories" className="nav-link" href="#" onClick={this.onNavItemClick}>
+                <span id="edit-categories" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Edit Categories
                 </span>
               </li>
