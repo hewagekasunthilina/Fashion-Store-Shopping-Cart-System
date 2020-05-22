@@ -33,7 +33,7 @@ class WishItemCard extends React.Component {
   render() {
     return (
       <div
-        className="card text-center"
+        className="card text-center card border-dark mb-3"
         style={{
           width: "18rem",
           maxHeight: "30rem",
