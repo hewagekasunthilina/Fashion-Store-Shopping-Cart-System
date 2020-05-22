@@ -6,7 +6,7 @@ class Footer extends Component {
             <div className="footer">
                 <div className="inner-footer">
                     <div className="footer-items">
-                        <h1>Look @ Me</h1>
+                        <h1>OFAL Fashions</h1>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci aliquid amet, animi consectetur corporis culpa, cupiditate eaque id,
@@ -72,7 +72,7 @@ class Footer extends Component {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    Copyright @copy; Look @ Me 2020. All rights reserved.
+                    Copyright @copy; OFAL Fashions 2020. All rights reserved.
                 </div>
             </div>
 

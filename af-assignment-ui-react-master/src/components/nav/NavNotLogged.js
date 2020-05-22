@@ -23,9 +23,9 @@ class NavNotLogged extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#83809E" }}>
+      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#605D78" }}>
         <div className="container-fluid">
-          <span className="navbar-brand" href="#" style={{color: "#900C3F", fontSize: "2rem", marginRight: "5%"}}>
+          <span className="navbar-brand" href="#" style={{color: "#FFD9D9", fontSize: "2rem", marginRight: "5%", fontFamily: "Lucida Sans Unicode", fontWeight: "bold", fontStyle: "oblique"}}>
             OFAL Fashions
           </span>
           <span
@@ -43,13 +43,13 @@ class NavNotLogged extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <span className="nav-link" href="#" style={{fontWeight: "600", color:"#000"}} onClick={this.onItemsNavClick}>
-                  ITEMS
+                <span className="nav-link" href="#" style={{marginRight: "2rem", color: "#ffffff"}} onClick={this.onItemsNavClick}>
+                  Items
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#" style={{fontWeight: "600", color:"#000"}} onClick={this.onLoginRegisterNavClick}>
-                  LOGIN / REGISTER
+                <span className="nav-link" href="#" style={{marginRight: "2rem", color: "#ffffff"}} onClick={this.onLoginRegisterNavClick}>
+                  Login / Register
                 </span>
               </li>
             </ul>

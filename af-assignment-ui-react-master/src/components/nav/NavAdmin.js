@@ -31,9 +31,9 @@ class NavAdmin extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#83809E" }}>
+      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#605D78" }}>
         <div className="container-fluid">
-          <span className="navbar-brand" href="#" style={{color: "#900C3F", fontSize: "2rem", marginRight: "5%"}}>
+          <span className="navbar-brand" href="#" style={{color: "#FFD9D9", fontSize: "2rem", marginRight: "5%", fontFamily: "Lucida Sans Unicode", fontWeight: "bold", fontStyle: "oblique"}}>
             OFAL Fashions
           </span>
           <span
