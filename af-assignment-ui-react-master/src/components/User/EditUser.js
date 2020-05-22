@@ -128,7 +128,7 @@ class EditUser extends React.Component {
                 </button>
 								<button
 									href="#"
-									className="btn btn-outline-danger btn-sm"
+									className="btn btn-danger btn-sm"
                   onClick={this.onDeleteBtnClick}
                   style={{ marginLeft: "1rem" }}
 								>
