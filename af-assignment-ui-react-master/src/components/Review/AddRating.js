@@ -33,7 +33,7 @@ class AddRating extends React.Component {
             <br />
             <div><StarRatings
               rating={this.state.rating}
-              starRatedColor="blue"
+              starRatedColor="Red"
               changeRating={this.onRatingChange}
               numberOfStars={5}
               name='rating'
