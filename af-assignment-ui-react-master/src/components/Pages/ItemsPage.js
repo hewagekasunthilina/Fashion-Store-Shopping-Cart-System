@@ -99,8 +99,8 @@ class ItemsPage extends React.Component {
                     <hr/>
 
 
-                  <div className="container">
-                    <div className="row align-items-center">
+                  <div className="container" style={{maxWidth: "1500px"}}>
+                    <div className="row align-items-center" style={{marginRight: "-30px"}}>
                         {this.state.items.map((item, index) => {
                             return (
                                 <ItemCard
