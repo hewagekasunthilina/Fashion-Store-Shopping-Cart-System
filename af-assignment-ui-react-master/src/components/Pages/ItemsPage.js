@@ -88,7 +88,8 @@ class ItemsPage extends React.Component {
         return (
             <div>
 
-                <Carousel></Carousel>
+                <Carousel>
+                </Carousel>
                 <div className="col-md-3" style={{display: "contents"}}><span
                     style={{marginLeft: "45.5%", fontWeight: "600"}}>
                         SHOP BY CATEGORY</span>
