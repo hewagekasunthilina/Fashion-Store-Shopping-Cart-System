@@ -57,7 +57,7 @@ class AddManagerUser extends React.Component {
   render() {
     return (
       <div className="align-items-center justify-content-center row " style={{ margin: ".5rem", padding: ".5rem", width: "80rem"}}>
-        <div className={this.state.cardClass} style={{ backgroundColor: "#343A40"}}>
+        <div className={this.state.cardClass} style={{ backgroundColor: "#343A40", marginLeft: "12rem"}}>
           <div className="card-body">
               <div className="card-header"><h3 style={{textAlign: "center", color:"#fff"}}>Add New Store Manager</h3></div>
                 <div>
