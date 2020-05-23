@@ -29,7 +29,7 @@ class AddRating extends React.Component {
     return (
       <div>
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">Add a Rating</label>
+            <label for="exampleFormControlTextarea1">Rate the Item</label>
             <br />
             <div><StarRatings
               rating={this.state.rating}
