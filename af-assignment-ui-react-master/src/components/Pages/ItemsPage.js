@@ -17,6 +17,9 @@ class ItemsPage extends React.Component {
         this.fetchCategories = this.fetchCategories.bind(this);
         this.fetchItemsByCategory = this.fetchItemsByCategory.bind(this);
         this.onCategoryChange = this.onCategoryChange.bind(this);
+       // this.addItemToCart = this.addItemToCart.bind(this);
+        // this.fetchItems = this.fetchItems.bind(this);
+       // this.viewItem = this.viewItem.bind(this);
     }
 
     componentDidMount() {
