@@ -11,7 +11,7 @@ class Carousel extends Component{
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div className="carousel-inner">
+                <div className="carousel-inner" style={{marginBottom:"8px"}}>
                     <div className="carousel-item active">
                         <img src="https://firebasestorage.googleapis.com/v0/b/fashion-store-1da9a.appspot.com/o/Web-Banner-5.png?alt=media&token=0dc2204e-2a96-4c7a-b717-34ddba27c4d8" className="d-block w-100" alt="..."/>
                     </div>
