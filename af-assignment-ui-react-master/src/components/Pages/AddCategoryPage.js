@@ -53,7 +53,7 @@ class AddCategoryPage extends React.Component {
 
               <div>
               <div className="form-group">
-                <small style={{color:"#fff"}}>Name</small><br />
+                <small style={{color: "#fff"}}>Name</small><br />
                 <input ref={this.name} type="text" className={this.state.nameClass} placeholder="Party Wear"/>
               </div>
               <div className="form-group">

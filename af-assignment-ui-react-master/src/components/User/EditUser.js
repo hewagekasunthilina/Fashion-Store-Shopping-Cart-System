@@ -86,7 +86,7 @@ class EditUser extends React.Component {
                 style={{margin: ".5rem", padding: ".5rem"}}
             >
                 <div className="card">
-                    <div className="card-body" >
+                    <div className="card-body">
                         <div class="form-inline">
                             <div class="form-group" style={{"margin-right": "1rem"}}>
                                 <label style={{"margin-right": ".5rem"}}>Email</label>
@@ -136,7 +136,8 @@ class EditUser extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <div className="form-group  card-body d-flex justify-content-end" style={{"margin-right": "1rem"}}>
+                        <div className="form-group  card-body d-flex justify-content-end"
+                             style={{"margin-right": "1rem"}}>
                             <button
                                 href="#"
                                 className="btn btn-success btn-sm"
@@ -154,7 +155,8 @@ class EditUser extends React.Component {
                             </button>
                         </div>
 
-                        <div class="form-check card-body align-items-right justify-content-right" style={{float: "right"}}>
+                        <div class="form-check card-body align-items-right justify-content-right"
+                             style={{float: "right"}}>
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
                                    onChange={this.onCheckBoxChange}/>
                             <small class="form-check-label" for="defaultCheck1">

@@ -7,6 +7,6 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://18.141.11.75:3001/",
-  responseType: "json"
+    baseURL: "http://18.141.11.75:3001/",
+    responseType: "json"
 });

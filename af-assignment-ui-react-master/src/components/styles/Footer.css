@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -13,13 +13,13 @@
 /*    line-height: 40px;*/
 /*}*/
 
-.footer{
+.footer {
     width: 100%;
     background: #00121b;
     display: block;
 }
 
-.inner-footer{
+.inner-footer {
     width: 95%;
     margin: auto;
     padding: 30px 10px;
@@ -29,26 +29,27 @@
     justify-content: center;
 }
 
-.footer-items{
+.footer-items {
     width: 25%;
     padding: 10px 20px;
     box-sizing: border-box;
 }
-h1{
+
+h1 {
     padding: 10px 0;
     font-size: 25px;
     color: #fff;
     text-transform: uppercase;
 }
 
-.footer-items p{
+.footer-items p {
     color: grey;
     font-size: 16px;
     text-align: justify;
     line-height: 25px;
 }
 
-h2{
+h2 {
     margin: 10px 0;
     color: grey;
     font-size: 16px;
@@ -56,50 +57,51 @@ h2{
     text-transform: uppercase;
 }
 
-.border{
+.border {
     height: 2px;
     width: 40px;
     background: #ff9800;
 }
 
-ul{
+ul {
     list-style: none;
     color: #fff;
     font-size: 15px;
     letter-spacing: 0.5px;
 }
 
-ul a{
+ul a {
     text-decoration: none;
     outline: none;
     color: #fff;
     transition: 0.3s;
 }
 
-ul a:hover{
-    color:#ff9800 ;
+ul a:hover {
+    color: #ff9800;
 }
 
-ul li{
+ul li {
     margin: 10px 0;
     height: 25px;
 }
 
-li i{
+li i {
     margin-right: 20px;
 }
 
-.social-media{
+.social-media {
     width: 100%;
     color: #fff;
     text-align: center;
     margin-left: -4rem;
 }
-.social-media a{
+
+.social-media a {
     text-decoration: none;
 }
 
-.social-media i{
+.social-media i {
     height: 15px;
     width: 15px;
     margin: 20px 5px;
@@ -114,21 +116,21 @@ li i{
 /*    background: grey;*/
 /*}*/
 
-.footer-bottom{
+.footer-bottom {
     padding: 10px;
     background: #3d545f;
     color: #fff;
     font-size: 12px;
 }
 
-@media screen and(max-width: 1085px){
-    .footer-items{
+@media screen and(max-width: 1085px) {
+    .footer-items {
         width: 50%;
     }
 }
 
-@media screen and(max-width: 600px){
-    .footer-items{
+@media screen and(max-width: 600px) {
+    .footer-items {
         width: 50%;
     }
 }
