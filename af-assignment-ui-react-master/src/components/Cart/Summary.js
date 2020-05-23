@@ -53,7 +53,7 @@ class Summary extends React.Component {
 
   render() {
     return (
-      <div className="align-items-center" style={{ margin: ".5rem", padding: ".5rem"}}>
+      <div className="align-items-center" style={{ margin: ".5rem", padding: ".5rem",backgroundColor: "#343A40"}}>
         <div className={this.state.cardClasses}>
           <div className="card-body">
             <h5 className="card-title">Payment</h5>
