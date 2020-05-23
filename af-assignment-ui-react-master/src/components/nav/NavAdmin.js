@@ -23,6 +23,7 @@ class NavAdmin extends React.Component {
       case "edit-users": this.props.goToPage("EditUsers"); break;
       case "add-category": this.props.goToPage("AddCategoryPage"); break;
       case "edit-categories": this.props.goToPage("EditCategoriesPage"); break;
+      case "wishlist": this.props.goToPage("WishlistPage"); break;
       case "cart": this.props.goToPage("ShoppingCartPage"); break;
       case "name": this.props.goToPage("Profile"); break;
       case "logout": this.props.logout(); break;
@@ -62,7 +63,7 @@ class NavAdmin extends React.Component {
               </li>
               <li className="nav-item">
                 <span id="edit-users" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
-                  Edit Management Users
+                  Edit Users
                 </span>
               </li>
               <li className="nav-item">
@@ -73,6 +74,11 @@ class NavAdmin extends React.Component {
               <li className="nav-item">
                 <span id="edit-categories" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Edit Categories
+                </span>
+              </li>
+              <li className="nav-item">
+                <span id="wishlist" className="nav-link" href="#" style={{color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
+                  Wish List
                 </span>
               </li>
             </ul>

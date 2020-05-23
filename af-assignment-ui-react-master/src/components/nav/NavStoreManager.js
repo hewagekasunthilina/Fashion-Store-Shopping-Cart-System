@@ -64,7 +64,7 @@ class NavStoreManager extends React.Component {
                   Edit Items
                 </span>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <span className="nav-link" href="#" id="wishlist" style={{marginRight: "2rem", color: "#ffffff", marginTop: "-.2rem"}} onClick={this.onNavItemClick}>
                   Wish list
                 </span>
